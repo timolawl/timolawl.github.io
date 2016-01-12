@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Timolawl</title>
-    <!-- link to main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/cv">CV</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+
+  <title>Timolawl</title>
+  <!-- link to main stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <!-- favicon link; new values after query string forces browser refresh (ref:hash) -->    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
+</head>
+<body>
+  <nav class="nav">
+    <ul>
+      <li><a id="home" class="active" href="/">Home</a></li>
+      <li><a id="about" href="/about">About</a></li>
+      <li><a id="cv" href="/cv">CV</a></li>
+      <li><a id="blog" href="/blog">Blog</a></li>
+    </ul>
     </nav>
-    <div class="container">
-      <div class="blurb">
-        <h1>Hi there, I'm Timolawl!</h1>
-        <p>I'm currently testing git pushes from the console. <a href="/about">Read more about my life...</a></p>
-      </div><!-- /.blurb -->
-    </div><!-- /.container -->
-    <footer>
-      <ul>
-        <li><a href="mailto:timolawl@gmail.com">email</a></li>
-        <li><a href="https://github.com/timolawl">github.com/timolawl</a></li>
-      </ul>
+  <div class="background-container">
+    <section class="jumbotron">
+      <div class="container">
+          <h1 class="jumbotext">McDonalds Coffee Enthusiast</h1>
+      </div><!-- /.container -->
+      </section><!-- /.jumbotron -->
+    <div class="width-container">
+        <div class="blurb">
+            <h1>Hi there, I'm Timolawl!</h1>
+            <p>I'm currently testing git pushes from the terminal. Also testing changes on a localhost server before pushing to origin. Adding more text to see what happens when the page extends past the viewport height. Adding some BRs <br><br><br><br>Still need more BRs <br><br><br><br><br> <a href="/about">Read more about my life...</a></p>
+        </div><!-- /.blurb -->
+    </div><!-- /.width-container -->
+    <footer class="footer">
+        <ul>
+            <li><a href="mailto:timolawl@gmail.com">email</a></li>
+            <li><a href="https://github.com/timolawl">github.com/timolawl</a></li>
+        </ul>
     </footer>
-  </body>
+  </div><!-- /.background-container -->
+</body>
 </html>
