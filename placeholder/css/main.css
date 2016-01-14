@@ -6,12 +6,13 @@
 /*    background-color: #bbb; why is universal selector overriding specificity? */
 }
 
-/*
+
 html, body {
     height: 100%;
-    overflow: hidden;
+/*    overflow: hidden; */
+    background-color: gray;
 }
-*/
+
 /*
 body {
     margin: 0px auto;
@@ -89,7 +90,7 @@ a {
 }
 
 .background-container {
-    background-color: gray;
+ /*   background-color: gray; */
     height: 100%;
     margin-top: 52px;
 }
@@ -148,14 +149,3 @@ p {
 footer a:hover {
     text-decoration: underline;
 }
-
-/*
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
-*/
