@@ -88,12 +88,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-* {
+*, :before, :after {
     margin: 0;
     padding: 0;
-}
-
-*, :before, :after {
     box-sizing: inherit;
     position: relative;
 }
@@ -102,26 +99,20 @@ html, body {
     box-sizing: border-box;
     font-family: 'Open Sans', 'Sans-Serif';
     text-align: center;
-    vertical-align: middle;
     height: 100%;
     width: 100%;
     background-color: #fff;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    resize: both;
-    overflow: auto;
-    padding: 20px;
-    margin: 0 auto;
-
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 svg {
-    padding: 20px;
     width: 40%;
+    padding: 20px;
 }
 
 [id^="cog-"]  {
@@ -142,8 +133,7 @@ svg {
     75% {transform: rotate(270deg);}
     87.5% {transform: rotate(315deg);}
     100% {transform: rotate(360deg);}
- }
-
+}
 
 p {
     font-size: 2rem;
