@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="og:url" content="{{ page.url }}"/>
+    <meta property="og:description" content="{{ site.description }}"/>
+
+    <title>{{ page.title}} - {{ site.name }}</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat|Istok+Web">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- importing modernizer won't work since the folder is in a folder jekyll won't build -->
+    <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="site__wrapper">
+        <header class="site__header">
+
+            <a class="site__title" href="/">
+                <svg class="site__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
+                    <style>
+                        .st0{fill:#414042}
+                        .st1{fill:#8d8c8e}
+                        .st2{fill:#69e3ff}
+                        .st3{fill:#357280}
+                        .st4{fill:#212021}
+                        .st5{fill:#a5eeff}
+                        .st6{fill:none;stroke:#000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
+                    </style>
+                    <path id="XMLID_3_" class="st0" d="M122 2l-20 20H62V2z"/>
+                    <path id="XMLID_6_" class="st1" d="M122 2H62v6h54z"/>
+                    <path id="XMLID_2_" class="st2" d="M42 22v40l20 20V22z"/>
+                    <path id="XMLID_10_" class="st3" d="M48 22v40l14 14v6L42 62V22z"/>
+                    <path id="XMLID_5_" class="st0" d="M62 22v60l20-20V22z"/>
+                    <path id="XMLID_8_" class="st4" d="M76 62V22h6v40L62 82v-6z"/>
+                    <path id="XMLID_4_" class="st2" d="M62 2v20H22L2 2z"/>
+                    <path id="XMLID_9_" class="st5" d="M2 2l6 6h54V2z"/>
+                    <path id="XMLID_23_" class="st6" d="M42 22v40l20 20"/>
+                    <path id="XMLID_22_" class="st6" d="M82 22v40L62 82V22"/>
+                    <path id="XMLID_21_" class="st6" d="M62 22h40l20-20H62"/>
+                    <path id="XMLID_20_" class="st6" d="M42 22H22L2 2h60v20z"/>
+                </svg>
+            </a>
+
+            <div class="wrapper">
+                {% include nav.html %}
+            </div>
+
+         </header>
+    </div> <!-- end .site__wrapper -->

@@ -1,0 +1,35 @@
+//
+// post classes
+//
+
+.posts {
+    &__list {
+    list-style: none;
+    }
+}
+
+
+.post {
+// this section is for actual post customization
+    width: 80%;
+    margin: 0 auto;
+
+    &__header {
+        margin-bottom: 10px;
+    }
+
+    &__content {
+        text-indent: 20px;
+        text-align: justify;
+    }
+
+// this is for the post listing
+    &__title {
+        display: block;
+    }
+    &__date {
+        display: block;
+        color: #8d8c8e;
+        margin-bottom: 10px;
+    }
+}

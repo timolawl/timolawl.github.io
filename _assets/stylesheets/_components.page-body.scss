@@ -1,0 +1,26 @@
+//
+// page body classes
+//
+
+.page {
+    &__body {
+        margin-top: 150px;
+        width: 80%;
+        text-align: center;
+    }
+    
+    &__header {
+        margin-bottom: 10px;
+    }
+}
+
+.home {
+    &__cog {
+        background-image: url('/uploads/TimolawlBGCog.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        padding: 50px 0;
+    }
+
+}

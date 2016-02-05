@@ -1,2 +1,12 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Ignore Jekyll generated files
+_site
+
+# Ignore caches and logs
+.sass-cache
+Gemfile.lock
+
+# Ignore .jekyll-meta (introduced by Jekyll 3.0 for incremental builds)
+.jekyll-metadata
+
+# Ignore junk files
+.DS_Store

@@ -1,0 +1,23 @@
+#==============================
+# General site configuration
+#==============================
+
+title: Tim Chiang's GitHub Page
+email: timolawl@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+    Tim Chiang's GitHub page. Timolawl is wordplay on timolol, a non-selective beta-blocker.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "timolawl.github.io" # the base hostname & protocol for your site
+twitter_username:
+github_username:  Timolawl
+
+# Permalink style
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+
+# sass_dir
+sass:
+    sass_dir: _assets/stylesheets
+    style: compressed

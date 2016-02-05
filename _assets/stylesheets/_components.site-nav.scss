@@ -1,0 +1,110 @@
+/* exclusively classes, use variables to extend */
+/* there's no flexbox use with bem since everything is flat.*/
+
+// nav structure
+// html - body - site__wrapper
+// site__wrapper - site__header
+// header - title + wrapper of nav
+// title - logo
+// wrapper - nav
+// nav - a, ul, li
+
+.site {
+    &__wrapper {
+        // segment for fixing the nav bar to the top of the viewport
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin-top: 10px;
+        height: auto;
+        z-index: 100;
+    }
+
+    &__header {
+        //explicit declaration of width, with margin centering if needed
+        width: 100%;
+        max-width: 960px;
+        height: 84px;
+        margin: auto;
+        text-align: center;
+    //    background-color: hsla(150, 50%, 25%, 0.5);
+    }
+
+    &__title {
+        //set width 10% of the parent element and horizontally center
+        width: 124px;
+        height: 84px;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        //set z-index so that it is above the other elements, not behind
+        z-index: 100;
+    }
+
+    &__logo {
+   //     background-color: hsla(310, 25%, 50%, 0.5);
+    }
+
+    &__nav {
+        font-family: $font-stack-header;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+        a {
+            color: black;
+            text-decoration: none;
+
+            &:link {
+                background-color: #8d8c8e;
+            }
+
+            &:hover {
+                background-color: #a5eeff;
+            }
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            display: inline-block;
+
+
+            &:first-child {
+                order: 1;
+                margin-right: 50px;
+            }
+
+            &:nth-child(2) {
+                order: 4;
+                margin-left: 50px;
+            }
+
+            &:nth-child(3) {
+                order: 2;
+                margin-right: 100px;
+            }
+
+            &:last-child {
+                order: 3;
+                margin-left: 100px;
+            }
+        }
+
+        &--blog {
+         //   top: 
+        }
+    }
+}
+
+.wrapper {
+    //needs to be inline-block; inline does not allow for text-align to center for some reason..
+    display: inline-block;
+
+}
+
+.active {
+    background-color: #69e3ff;
+}

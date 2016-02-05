@@ -1,0 +1,23 @@
+//
+// base links
+//
+
+a {
+    &:link {
+        color: #000;
+      //  color: #8d8c8e;
+    }
+
+    &:visited {
+        color: #000;
+    }
+    
+    &:hover {
+        color: #69e3ff;
+    }
+
+    &:active {
+        color: #69e3ff;
+    }
+
+}
