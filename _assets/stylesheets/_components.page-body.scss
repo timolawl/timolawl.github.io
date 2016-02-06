@@ -2,11 +2,14 @@
 // page body classes
 //
 
+
+// customization of layout: page
 .page {
+    // width 80% ensures that the content has room on the left and right
         width: 80%;
         max-width: 720px;
         margin: 0 auto;
-    
+
     &__header {
         text-align: center;
         margin-bottom: 10px;
@@ -17,32 +20,16 @@
     }
 }
 
+// styling specific to the home page
 .home {
-    &__cog {
+    &__title {
+    }
 
-/*
-        // removed :before
-       // content: "";
-       // position: absolute;
-       // z-index: -1;
-       // top: 50%;
-       // transform: translate(0, -50%);
-        background-image: url('/uploads/TimolawlBGCog.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 80%;
-        padding: 50px 0;
-        animation-name: rotation;
-        animation-duration: 8s;
-        animation-timing-function: ease;
-        animation-iteration-count: infinite;
-        transform-origin: 50% 50%;
-
-     //   opacity: 0.4;
-*/
+    &__content {
     }
 }
 
+// the cog svg in the home page
 .cog {
     position: absolute;
     width: 120px;
@@ -55,7 +42,7 @@
     animation-iteration-count: infinite;
     transform-origin: 50% 50%;
 
-
+// returns a white background between text and cog for text clarity.
     &__clear {
         background: #fff;
     }
@@ -66,10 +53,55 @@
     100% { transform: rotate(45deg); }
 }
 
+// styling specific to the about page
 .about {
+    &__title {
+    }
+
     &__content {
-        text-indent: 20px;
+        text-indent: 1em;
         text-align: justify;
     }
 }
 
+//styling specific to the portfolio page
+.portfolio {
+
+}
+
+//styling specific to the blog page
+.blog {
+    &-post {
+        &__list {
+            list-style: none;
+        }
+
+        &__link {
+            &:link {
+                color: #000;
+            }
+
+            &:visited {
+                color: #000;
+            }
+// I understand the need to specify the above 2, because I'm overriding via specificity the base links, but why do I need to also specify the following two? -- OH; because it HAS to follow the LVHA order.
+            &:hover {
+                color: #69e3ff;
+            }
+
+            &:active {
+                color: #69e3ff;
+            }
+        }
+
+        &__title {
+            display: block;
+        }
+
+        &__date {
+            display: block;
+            color: #8d8c8e;
+            margin-bottom: 10px;
+        }
+    }
+}

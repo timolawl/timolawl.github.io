@@ -3,5 +3,7 @@
 //
 
 .wrap {
+    //the block portion is needed for the element to center in its parent
+    display: inline-block;
     margin: 0 auto;
 }

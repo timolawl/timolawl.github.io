@@ -14,17 +14,19 @@
     //poor naming for this one..
     &__wrapper {
         // segment for fixing the nav bar to the top of the viewport
+        // also serves as a general wrapper
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
         margin-top: 20px;
         height: auto;
+        //need to specify z-index for fixed/absolute elements
         z-index: 100;
     }
 
     &__header {
-        //explicit declaration of width, with margin centering if needed
+        //explicit declaration of width (max-width), with margin centering if needed
         width: 100%;
         max-width: 960px;
         height: 84px;
@@ -34,20 +36,24 @@
     }
 
     &__title {
-        //set width 10% of the parent element and horizontally center
+        // set width and height of parent element of svg to the native svg size
         width: 124px;
         height: 84px;
         margin: auto;
         position: absolute;
+        //the following centers the absolute element.
         top: 0; left: 0; bottom: 0; right: 0;
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
     }
-
+    
+    // this is the svg logo class itself - for future use if animating.
     &__logo {
    //     background-color: hsla(310, 25%, 50%, 0.5);
     }
 
+
+    // all nav customization
     &__nav {
         font-family: $font-stack-header;
         font-size: 1.2rem;
@@ -94,20 +100,10 @@
                 margin-left: 100px;
             }
         }
-
-        &--blog {
-         //   top: 
-        }
     }
 }
 
-.wrapper {
-    //needs to be inline-block; inline does not allow for text-align to center for some reason..
-    display: inline-block;
-    margin: 0 auto;
-
-}
-
+// active page
 .active {
     background-color: #69e3ff;
 }

@@ -6,9 +6,17 @@ layout: default
   <header class="page__header">
     <h1 class="page__title">{{ page.title }}</h1>
   </header>
-
   <div class="page__content">
-    {{ content }}
+      <!-- specific page styling -->
+    <div class="{{ page.title | downcase }}__content">
+        {{ content }}
+    </div>
   </div>
 
+
+<!--
+  <div class="page__content ">
+    {{ content }}
+  </div>
+-->
 </article>

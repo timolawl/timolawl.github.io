@@ -4,6 +4,7 @@
 
 html {
     font-family: $font-stack-body;
-    text-rendering: optimizeLegibility;
+    //this actually messed up my spacing in chrome - don't use
+  //  text-rendering: optimizeLegibility;
 }
 
