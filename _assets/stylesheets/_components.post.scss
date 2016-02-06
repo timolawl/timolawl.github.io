@@ -8,13 +8,14 @@
     }
 }
 
-
 .post {
 // this section is for actual post customization
     width: 80%;
+    max-width: 720px;
     margin: 0 auto;
 
     &__header {
+        text-align: center;
         margin-bottom: 10px;
     }
 
