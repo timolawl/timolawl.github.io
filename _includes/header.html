@@ -12,7 +12,7 @@
     <title>{{ page.title}} - {{ site.name }}</title>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat|Istok+Web">
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
@@ -27,30 +27,88 @@
     <div class="site__wrapper">
         <header class="site__header">
 
-            <a class="site__title" href="/">
-                <svg class="site__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
+            <a class="site__title logo--status" href="/">
+                <svg class="site__logo logo--basic {% if page.title == 'Home' %}is-hidden{% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
                     <style>
-                        .st0{fill:#414042}
-                        .st1{fill:#8d8c8e}
-                        .st2{fill:#69e3ff}
-                        .st3{fill:#357280}
-                        .st4{fill:#212021}
-                        .st5{fill:#a5eeff}
-                        .st6{fill:none;stroke:#000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
+                        .bt0{fill:#a5eeff}
+                        .bt1{fill:#8d8c8e}
+                        .bt2{fill:none;
+                            stroke:#000;
+                            stroke-width:4;
+                            stroke-linecap:round;
+                            stroke-linejoin:round;
+                            stroke-miterlimit:10}
                     </style>
-                    <path id="XMLID_3_" class="st0" d="M122 2l-20 20H62V2z"/>
-                    <path id="XMLID_6_" class="st1" d="M122 2H62v6h54z"/>
-                    <path id="XMLID_2_" class="st2" d="M42 22v40l20 20V22z"/>
-                    <path id="XMLID_10_" class="st3" d="M48 22v40l14 14v6L42 62V22z"/>
-                    <path id="XMLID_5_" class="st0" d="M62 22v60l20-20V22z"/>
-                    <path id="XMLID_8_" class="st4" d="M76 62V22h6v40L62 82v-6z"/>
-                    <path id="XMLID_4_" class="st2" d="M62 2v20H22L2 2z"/>
-                    <path id="XMLID_9_" class="st5" d="M2 2l6 6h54V2z"/>
-                    <path id="XMLID_23_" class="st6" d="M42 22v40l20 20"/>
-                    <path id="XMLID_22_" class="st6" d="M82 22v40L62 82V22"/>
-                    <path id="XMLID_21_" class="st6" d="M62 22h40l20-20H62"/>
-                    <path id="XMLID_20_" class="st6" d="M42 22H22L2 2h60v20z"/>
+                    <path id="XMLID_363_" d="M82 2L62 22 42 2z"/>
+                    <path id="XMLID_362_" class="bt0" d="M48 2h-6l20 20v-6z"/>
+                    <path id="XMLID_361_" d="M76 2L62 16v6L82 2z"/>
+                    <path id="XMLID_360_" d="M62 22l14 40-14 20-14-20z"/>
+                    <path id="XMLID_359_" d="M74.1 56.7L62 74v8l14-20z"/>
+                    <path id="XMLID_358_" class="bt0" d="M49.9 56.7L48 62l14 20v-8z"/>
+                    <path id="XMLID_419_" class="bt1" d="M122 2l-20 20H62L82 2h34z"/>
+                    <path id="XMLID_418_" class="bt1" d="M62 22H22L2 2h40z"/>
+                    <path id="XMLID_416_" class="bt2" d="M82 2H42"/>
+                    <path id="XMLID_415_" class="bt2" d="M42 2H2l20 20h40z"/>
+                    <path id="XMLID_414_" class="bt2" d="M82 2h40l-20 20H62z"/>
+                    <path id="XMLID_413_" class="bt2" d="M48 62l14 20 14-20-14-40z"/>
                 </svg>
+
+                <svg class="site__logo logo--hover is-hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
+                    <style>
+                        .ht0{fill:#8d8c8e}
+                        .ht1{fill:#69e3ff}
+                        .ht2{fill:#a5eeff}
+                        .ht3{fill:#c3f4ff}
+                        .ht4{fill:none;
+                        stroke:#000;
+                        stroke-width:4;
+                        stroke-linecap:round;
+                        stroke-linejoin:round;
+                        stroke-miterlimit:10}
+                    </style>
+                    <path id="XMLID_51_" class="ht0" d="M122 2l-20 20H62L82 2h34z"/>
+                    <path id="XMLID_50_" class="ht0" d="M62 22H22L2 2h40z"/>
+                    <path id="XMLID_49_" class="ht1" d="M82 2L62 22v-8L74 2z"/>
+                    <path id="XMLID_48_" class="ht1" d="M74.1 56.7L76 62 62 82v-8z"/>
+                    <path id="XMLID_47_" class="ht2" d="M65 30.6l9.1 26.1L62 74v-.6L54 62l1.9-5.3L62 39.2z"/>
+                    <path id="XMLID_46_" class="ht2" d="M74 2L62 14 50 2z"/>
+                    <path id="XMLID_45_" class="ht3" d="M62 22l3 8.6-3 8.6z"/>
+                    <path id="XMLID_44_" class="ht3" d="M62 74v8L48 62l1.9-5.3L62 22v17.2l-6.1 17.5L54 62l8 11.4z"/>
+                    <path id="XMLID_43_" class="ht3" d="M62 14v8L42 2h8z"/>
+                    <path id="XMLID_41_" class="ht4" d="M82 2H42"/>
+                    <path id="XMLID_40_" class="ht4" d="M42 2H2l20 20h40z"/>
+                    <path id="XMLID_39_" class="ht4" d="M82 2h40l-20 20H62z"/>
+                    <path id="XMLID_38_" class="ht4" d="M62 22L49.9 56.7 48 62l14 20 14-20-1.9-5.3L65 30.6z"/>
+                </svg>
+
+                <svg class="site__logo logo--at-home {% if page.title != 'Home' %}is-hidden {% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
+                    <style>
+                        .st0{fill:#8d8c8e}
+                        .st1{fill:#357280}
+                        .st2{fill:#69e3ff}
+                        .st3{fill:#a5eeff}
+                        .st4{fill:none;
+                        stroke:#000;
+                        stroke-width:4;
+                        stroke-linecap:round;
+                        stroke-linejoin:round;
+                        stroke-miterlimit:10}
+                    </style>
+                    <path id="XMLID_451_" class="st0" d="M122 2l-20 20H62L82 2h34z"/>
+                    <path id="XMLID_450_" class="st0" d="M62 22H22L2 2h40z"/>
+                    <path id="XMLID_449_" class="st1" d="M82 2L62 22v-8L74 2z"/>
+                    <path id="XMLID_448_" class="st1" d="M74.1 56.7L76 62 62 82v-8z"/>
+                    <path id="XMLID_447_" class="st2" d="M65 30.6l9.1 26.1L62 74v-.6L54 62l1.9-5.3L62 39.2z"/>
+                    <path id="XMLID_446_" class="st2" d="M74 2L62 14 50 2z"/>
+                    <path id="XMLID_445_" class="st3" d="M62 22l3 8.6-3 8.6z"/>
+                    <path id="XMLID_444_" class="st3" d="M62 74v8L48 62l1.9-5.3L62 22v17.2l-6.1 17.5L54 62l8 11.4z"/>
+                    <path id="XMLID_443_" class="st3" d="M62 14v8L42 2h8z"/>
+                    <path id="XMLID_441_" class="st4" d="M82 2H42"/>
+                    <path id="XMLID_440_" class="st4" d="M42 2H2l20 20h40z"/>
+                    <path id="XMLID_439_" class="st4" d="M82 2h40l-20 20H62z"/>
+                    <path id="XMLID_438_" class="st4" d="M62 22L49.9 56.7 48 62l14 20 14-20-1.9-5.3L65 30.6z"/>
+                </svg>
+
             </a>
 
             <div class="wrap">

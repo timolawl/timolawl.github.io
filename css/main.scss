@@ -1,6 +1,9 @@
 ---
 ---
 
+// the YAML front matter is required for jekyll to watch the file, but why?
+// the js/main.js file is watched and updated by jekyll no prob...
+
 @charset "UTF-8";
 
 @import "_settings.global";
@@ -18,6 +21,7 @@
 @import "_objects.wrappers";
 
 @import "_components.iconic";
+@import "_components.state";
 @import "_components.site-nav";
 @import "_components.page-head";
 @import "_components.page-body";

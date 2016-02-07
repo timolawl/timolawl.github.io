@@ -1,0 +1,25 @@
+<svg class="site__logo logo--active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
+    <style>
+        .st0{fill:#a5eeff}
+        .st1{fill:#8d8c8e}
+        .st2{fill:none;
+            stroke:#000;
+            stroke-width:4;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-miterlimit:10}
+    </style>
+    <path id="XMLID_363_" d="M82 2L62 22 42 2z"/>
+    <path id="XMLID_362_" class="st0" d="M48 2h-6l20 20v-6z"/>
+    <path id="XMLID_361_" d="M76 2L62 16v6L82 2z"/>
+    <path id="XMLID_360_" d="M62 22l14 40-14 20-14-20z"/>
+    <path id="XMLID_359_" d="M74.1 56.7L62 74v8l14-20z"/>
+    <path id="XMLID_358_" class="st0" d="M49.9 56.7L48 62l14 20v-8z"/>
+    <path id="XMLID_419_" class="st1" d="M122 2l-20 20H62L82 2h34z"/>
+    <path id="XMLID_418_" class="st1" d="M62 22H22L2 2h40z"/>
+    <path id="XMLID_416_" class="st2" d="M82 2H42"/>
+    <path id="XMLID_415_" class="st2" d="M42 2H2l20 20h40z"/>
+    <path id="XMLID_414_" class="st2" d="M82 2h40l-20 20H62z"/>
+    <path id="XMLID_413_" class="st2" d="M48 62l14 20 14-20-14-40z"/>
+</svg>
+

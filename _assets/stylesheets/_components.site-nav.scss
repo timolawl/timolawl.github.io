@@ -46,12 +46,9 @@
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
     }
-    
-    // this is the svg logo class itself - for future use if animating.
+    // this is the svg logo class itself
     &__logo {
-   //     background-color: hsla(310, 25%, 50%, 0.5);
     }
-
 
     // all nav customization
     &__nav {
@@ -103,7 +100,33 @@
     }
 }
 
+/**********************************************************
+* CSS Implementation of site logo hover effects           *
+* Pros: Faster than using jQuery; better for UI elements  *
+* Cons: Can only do so much                               *
+***********************************************************
+*/
+
+.logo--hover {
+    display: none;
+}
+
+.logo--status:hover .logo--hover,
+.logo--status:active .logo--hover {
+    display: block;
+}
+
+.logo--status:hover .logo--at-home,
+.logo--status:active .logo--at-home,
+.logo--status:hover .logo--basic,
+.logo--status:active .logo--basic {
+    display: none;
+}
+
+
 // active page
 .active {
-    background-color: #69e3ff;
+   background-color: #69e3ff;
 }
+
+

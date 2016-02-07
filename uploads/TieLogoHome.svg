@@ -1,0 +1,28 @@
+<svg class="site__logo logo--at-home {% if page.title != 'Home' %}is-hidden {% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
+    <style>
+        .st0{fill:#8d8c8e}
+        .st1{fill:#357280}
+        .st2{fill:#69e3ff}
+        .st3{fill:#a5eeff}
+        .st4{fill:none;
+        stroke:#000;
+        stroke-width:4;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10}
+    </style>
+    <path id="XMLID_451_" class="st0" d="M122 2l-20 20H62L82 2h34z"/>
+    <path id="XMLID_450_" class="st0" d="M62 22H22L2 2h40z"/>
+    <path id="XMLID_449_" class="st1" d="M82 2L62 22v-8L74 2z"/>
+    <path id="XMLID_448_" class="st1" d="M74.1 56.7L76 62 62 82v-8z"/>
+    <path id="XMLID_447_" class="st2" d="M65 30.6l9.1 26.1L62 74v-.6L54 62l1.9-5.3L62 39.2z"/>
+    <path id="XMLID_446_" class="st2" d="M74 2L62 14 50 2z"/>
+    <path id="XMLID_445_" class="st3" d="M62 22l3 8.6-3 8.6z"/>
+    <path id="XMLID_444_" class="st3" d="M62 74v8L48 62l1.9-5.3L62 22v17.2l-6.1 17.5L54 62l8 11.4z"/>
+    <path id="XMLID_443_" class="st3" d="M62 14v8L42 2h8z"/>
+    <path id="XMLID_441_" class="st4" d="M82 2H42"/>
+    <path id="XMLID_440_" class="st4" d="M42 2H2l20 20h40z"/>
+    <path id="XMLID_439_" class="st4" d="M82 2h40l-20 20H62z"/>
+    <path id="XMLID_438_" class="st4" d="M62 22L49.9 56.7 48 62l14 20 14-20-1.9-5.3L65 30.6z"/>
+</svg>
+
