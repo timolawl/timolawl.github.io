@@ -1,0 +1,63 @@
+.commit-message-wrapper {
+
+    padding: 10px 20px;
+    margin: 100px auto 0;
+    background-color: #464a4f;
+    text-align: left;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.discord-image-wrapper {
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.discord-image {
+    display:inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
+.commit-text {
+    display: inline-block;
+    text-align: left;
+    margin-left: 65px;
+}
+
+.discord-name {
+    display: inline-block;
+    text-align: left;
+    color: lighten($secondary-color, 50%);
+}
+
+.time-since-commit {
+    display: inline-block;;
+    font-size: 0.7rem;
+    color: #8d8c8e;
+}
+
+.commit-message-title {
+    display: block;
+    text-align: left;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+#lastCommitMessage {
+    display: block;
+    background-color: #3c4046;
+    padding: 0.5rem;
+    border: 2px solid #2d3035;
+    border-radius: 5px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: left;
+   // color: #79a4b3;
+  //  color: #90C3D4;
+    color: #a5eeff;
+}

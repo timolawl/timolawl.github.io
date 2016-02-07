@@ -15,3 +15,33 @@ First iteration. As always, the site is a <span class="home__cog">
         </g>
     </svg>
 <span class="cog__clear">work in progress.</span></span>
+
+<div class="commit-message-wrapper">
+    <span class="discord-image-wrapper"><img class="discord-image" src="{{ '/uploads/alienTimCircleCropped.png' | prepend: site.baseurl }}" alt="Tim's Discord logo" height="45" width="45"></span>
+    <div class="commit-text">
+        <p class="discord-name">timolawl </p>
+        <p class="time-since-commit"></p>
+        <p class="commit-message-title">Latest commit message: </p>
+        <div id="lastCommitMessage"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<script src="{{ '/js/git-message.js' | prepend: site.baseurl }}"></script>
+<script>
+    $(function() {
+        $(".time-since-commit").loadTimeSince();
+    });
+
+    $(function () {
+        $("#lastCommitMessage").loadLastCommitMessage();
+    });
+</script>
+
+<!--
+<script>
+    $(function() {
+        $("#lastCommitMessage").checkRateLimit();
+    });
+</script>
+-->

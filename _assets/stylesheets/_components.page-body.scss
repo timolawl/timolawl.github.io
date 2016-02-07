@@ -80,6 +80,8 @@
         // width specifies the width of the content area
         // (content area being inside padding/border/margin).
         // fit-content fits the content and makes the rest margin.
+        // lastly, un-vendor-prefixed property:value pair at end
+        // (if supported, use the regular version, basically)
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
