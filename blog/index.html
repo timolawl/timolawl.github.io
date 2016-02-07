@@ -3,13 +3,13 @@ layout: page
 title: Blog
 in-nav: true
 ---
-<ul class="blog-post__list">
+<ul class="blog__list-of-posts">
 {% for post in site.posts %}
     {% if post.hidden != true %}
-    <li>
-        <a class="blog-post__link" href="{{ post.url }}">
-            <span class="blog-post__title">{{ post.title }}</span>
-            <span class="blog-post__date">{{ post.date | date: "%B %Y"  }}</span>
+    <li class="blog__post">
+        <a class="blog__post-link" href="{{ post.url }}">
+            <span class="blog__post-title">{{ post.title }}</span>
+            <span class="blog__post-date">{{ post.date | date: "%B %Y" }}</span>
         </a>
     </li>
     {% endif %}

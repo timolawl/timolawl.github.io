@@ -71,12 +71,21 @@
 
 //styling specific to the blog page
 .blog {
-    &-post {
-        &__list {
-            list-style: none;
-        }
+    &__list-of-posts {
+        list-style: none;
+    }
 
-        &__link {
+    &__post {
+        // set the list element styling here
+        // width specifies the width of the content area
+        // (content area being inside padding/border/margin).
+        // fit-content fits the content and makes the rest margin.
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0 auto;
+
+        &-link {
             &:link {
                 color: #000;
             }
@@ -94,11 +103,11 @@
             }
         }
 
-        &__title {
+        &-title {
             display: block;
         }
 
-        &__date {
+        &-date {
             display: block;
             color: #8d8c8e;
             margin-bottom: 10px;
