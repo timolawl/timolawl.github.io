@@ -3,10 +3,11 @@
     padding: 10px 20px;
     margin: 100px auto 0;
     background-color: #464a4f;
-    text-align: left;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    max-width: 500px;
+  //  text-align: left;
+  //  width: -webkit-fit-content;
+  //  width: -moz-fit-content;
+  //  width: fit-content;
 }
 
 .discord-image-wrapper {
@@ -50,12 +51,13 @@
 #lastCommitMessage {
     display: block;
     background-color: #3c4046;
+    line-height: 1;
     padding: 0.5rem;
     border: 2px solid #2d3035;
     border-radius: 5px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+  //  width: -webkit-fit-content;
+  //  width: -moz-fit-content;
+  //  width: fit-content;
     text-align: left;
    // color: #79a4b3;
   //  color: #90C3D4;

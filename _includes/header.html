@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang=en>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:site_name" content="{{ site.name }}"/>
-    <meta property="og:url" content="{{ page.url }}"/>
-    <meta property="og:description" content="{{ site.description }}"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:description" content="{{ site.description }}" />
 
     <title>{{ page.title}} - {{ site.name }}</title>
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat|Istok+Web">
-    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat|Istok+Web" />
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+<!--
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+-->
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <!-- icons -->
+    <link rel=icon" sizes="any" mask="" href="{{ '/static/images/favulous.ico' | prepend: site.baseurl }}" />
+    <link rel="icon" href="{{ '/static/images/favulous.ico' | prepend: site.baseurl }}" />
+    <link rel="apple-touch-icon" href="{{ '/static/images/favulous.png' | prepend: site.baseurl }}" />
+    <link rel="icon" sizes="any" mask="" href="{{ '/static/images/favulous.svg' | prepend: site.baseurl }}" />
 
     <!-- importing modernizer won't work since the folder is in a folder jekyll won't build -->
     <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+
+    <script src="{{ '/js/script.js' | prepend: site.baseurl }}"></script>
+
+
+    <!-- dns-prefetch -->
+    <link rel="dns-prefetch" href="//medicine.buffalo.edu" />
+    <link rel="dns-prefetch" href="//som.ucsd.edu" />
+    <link rel="dns-prefetch" href="//medicine.stonybrookmedicine.edu" />
+    <link rel="dns-prefetch" href="//www.amc.edu" />
+
+
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -53,7 +71,7 @@
                     <path id="XMLID_413_" class="bt2" d="M48 62l14 20 14-20-14-40z"/>
                 </svg>
 
-                <svg class="site__logo logo--hover is-hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
+                <svg class="site__logo logo--highlight is-hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
                     <style>
                         .ht0{fill:#8d8c8e}
                         .ht1{fill:#69e3ff}

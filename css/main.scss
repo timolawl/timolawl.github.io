@@ -1,6 +1,11 @@
 ---
 ---
 
+// jekyllrb.com/docs/assets
+
+// the answer is that jekyll only parses liquid tags in _folders and anything
+// with the YAML front matter elsewhere.
+
 // the YAML front matter is required for jekyll to watch the file, but why?
 // the js/main.js file is watched and updated by jekyll no prob...
 

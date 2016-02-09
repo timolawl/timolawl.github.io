@@ -107,12 +107,12 @@
 ***********************************************************
 */
 
-.logo--hover {
+.logo--highlight {
     display: none;
 }
 
-.logo--status:hover .logo--hover,
-.logo--status:active .logo--hover {
+.logo--status:hover .logo--highlight,
+.logo--status:active .logo--highlight {
     display: block;
 }
 
