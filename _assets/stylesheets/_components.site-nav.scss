@@ -107,22 +107,27 @@
 ***********************************************************
 */
 
+// actually in mobile, there's no reason to have hover/active.
+// media queries for the win.
+
 .logo--highlight {
     display: none;
 }
 
-.logo--status:hover .logo--highlight,
-.logo--status:active .logo--highlight {
-    display: block;
-}
+.no-touchevents {
 
-.logo--status:hover .logo--at-home,
-.logo--status:active .logo--at-home,
-.logo--status:hover .logo--basic,
-.logo--status:active .logo--basic {
-    display: none;
-}
+    .logo--status:hover .logo--highlight,
+    .logo--status:active .logo--highlight {
+        display: block;
+    }
 
+    .logo--status:hover .logo--at-home,
+    .logo--status:active .logo--at-home,
+    .logo--status:hover .logo--basic,
+    .logo--status:active .logo--basic {
+        display: none;
+    }
+}
 
 // active page
 .active {

@@ -34,7 +34,7 @@ function loadScripts(scripts) {
     el.async = false;
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(el, s);
-
+// inserting the element before the starting script does not matter because the .onload event will still wait for the current script to execute before processing another.
     el.onload = function(script) {
     //    console.log(script + ' loaded!');
         if (scripts.length) {
