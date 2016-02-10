@@ -3,7 +3,13 @@
 //
 
 .wrap {
-    //the block portion is needed for the element to center in its parent
+    //the block portion is needed for the element to center in its parent if width not 100%
     display: inline-block;
+    margin: 0 auto;
+}
+
+.fill {
+    height: 4em;
+    width: auto;
     margin: 0 auto;
 }

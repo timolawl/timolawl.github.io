@@ -4,9 +4,16 @@
 
 .post {
 // this section is for actual post customization
-    width: 80%;
-    max-width: 720px;
     margin: 0 auto;
+
+    @media (max-width: 720px) {
+        width: 90%;
+    }
+
+    @media (min-width: 721px) {
+        width: 80%;
+        max-width: 720px;
+    }
 
     &__header {
         text-align: center;

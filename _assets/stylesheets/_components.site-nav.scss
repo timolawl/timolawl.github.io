@@ -28,8 +28,8 @@
     &__header {
         //explicit declaration of width (max-width), with margin centering if needed
         width: 100%;
+        height: auto;
         max-width: 960px;
-        height: 84px;
         margin: auto;
         text-align: center;
     //    background-color: hsla(150, 50%, 25%, 0.5);
@@ -42,7 +42,7 @@
         margin: auto;
         position: absolute;
         //the following centers the absolute element.
-        top: 0; left: 0; bottom: 0; right: 0;
+        top: 0; left: 0; right: 0;
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
     }
@@ -52,51 +52,115 @@
 
     // all nav customization
     &__nav {
+
         font-family: $font-stack-header;
         font-size: 1.2rem;
         text-transform: uppercase;
 
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
         a {
+            display: block;
             color: black;
             text-decoration: none;
-
+            
             &:link {
-                background-color: #8d8c8e;
+                background-color: $secondary-light;
+            }
+ 
+            &[class="active"] {
+                background-color: $primary-color;
             }
 
             &:hover {
-                background-color: #a5eeff;
+                background-color: $primary-light;
             }
         }
 
-        ul {
-            display: flex;
+        @media (max-width: 720px) {
+            margin-top: 24px;
+            padding-top: 60px;
+            background-color: $secondary-light;
+
+            ul {
+                flex-direction: column;
+            }
+
+            li {
+                &:first-child {
+                    order: 1;
+                }
+
+                &:nth-child(2) {
+                    order: 3;
+                }
+
+                &:nth-child(3) {
+                    order: 4;
+                }
+
+                &:last-child {
+                    order: 2;
+                }
+            }
+
+            a {
+                padding: 0.5em 0;
+            }
         }
 
-        li {
-            display: inline-block;
+        @media (min-width: 721px) {
+            li {
+                display: inline-block;
 
 
-            &:first-child {
-                order: 1;
-                margin-right: 50px;
-            }
+                &:first-child {
+                    order: 1;
+                    margin-right: 50px;
+                }
 
-            &:nth-child(2) {
-                order: 4;
-                margin-left: 50px;
-            }
+                &:nth-child(2) {
+                    order: 4;
+                    margin-left: 50px;
+                }
 
-            &:nth-child(3) {
-                order: 2;
-                margin-right: 100px;
-            }
+                &:nth-child(3) {
+                    order: 2;
+                    margin-right: 100px;
+                }
 
-            &:last-child {
-                order: 3;
-                margin-left: 100px;
+                &:last-child {
+                    order: 3;
+                    margin-left: 100px;
+                }
             }
         }
+    }
+}
+
+.nav-wrapper {
+
+    @media (max-width: 720px) {
+        display: inline-block;
+        max-height: 0;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 100%;
+   //     transform: scaleY(0);
+   //     transform-origin: top;
+
+  //      transition: transform 1s ease;
+
+        transition: all 250ms cubic-bezier(0.42, 0, 0.58, 1);
+    }
+
+    //the block portion is needed for the element to center in its parent if width not 100%
+    @media (min-width: 721px) {
+        display: inline-block;
+        margin: 0 auto;
     }
 }
 
@@ -131,7 +195,78 @@
 
 // active page
 .active {
-   background-color: #69e3ff;
+    background-color: $primary-color;
 }
 
 
+// hamburger menu
+@media (max-width: 720px) {
+    .hamburger-wrapper {
+        position: absolute;
+        top: 0;
+        right: 5%;
+    }
+
+    .hamburger {
+        z-index: 200;  //needed because nav-wrapper covers the area.
+        display: block;
+        margin: auto;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        background: #000;
+     /*   transition: background 0.2s ease-in-out; */
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background-color: $secondary-light;
+            transition-property: transform, top;
+            transition-duration: 0.2s;
+            transition-timing-function: ease;
+            transform: translateZ(0);
+        }
+
+        &:after {
+            @extend .hamburger:before;
+            top: 60%;
+        }
+
+        &:hover {
+            &:before {
+                @extend .hamburger:before;
+                background-color: $primary-light;
+            }
+            &:after {
+                @extend .hamburger:after;
+                background-color: $primary-light;
+            }
+        }
+    }
+
+    .hamburger-wrapper.open .hamburger {
+        background-color: $primary-color;
+        &:before, &:after {
+            top: 40%;
+            transform: rotate(45deg);
+            background-color: #000;
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            background-color: $primary-light;
+        }
+    }
+
+
+    .hamburger-wrapper.open + .nav-wrapper {
+        //if set to block, it sits at the bottom and not the top as it needs to be.
+        max-height: 400px; // made this number larger to accomodate scaled instances (normally 260px)
+    //    transform: scaleY(1);
+    }
+}
