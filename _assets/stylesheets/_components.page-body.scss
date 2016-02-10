@@ -35,12 +35,11 @@
     &__content {
     }
 }
-/*
+
 .WIP {
-    font-family: 'Italianno', cursive;
-    font-size: 2em;
+    background-color: #fff;
 }
-*/
+
 // the cog svg in the home page
 .cog {
     position: absolute;
@@ -54,12 +53,13 @@
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     transform-origin: 50% 50%;
-
+/*
 // returns a white background between text and cog for text clarity.
     &__clear {
         background: #fff;
         //might as well use it to add some spacing between the other lines.
     }
+    */
 }
 
 @keyframes rotation {
