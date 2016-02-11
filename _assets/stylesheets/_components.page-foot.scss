@@ -1,0 +1,16 @@
+//
+//  footer classes
+//
+
+.footer {
+    text-align: center;
+}
+
+.copyright {
+    width: 80%;
+    max-width: 720px;
+    display: inline-block;
+    padding-top: 1rem;
+    border-top: 1px solid lighten($secondary-light, 40%);
+    color: #8d8c8e;
+}

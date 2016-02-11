@@ -67,6 +67,15 @@
     100% { transform: rotate(45deg); }
 }
 
+.discord-message {
+    font-size: 0.8rem;
+    color: $secondary-light;
+}
+
+
+
+
+
 // styling specific to the about page
 .about {
     &__title {
