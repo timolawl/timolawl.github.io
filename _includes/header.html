@@ -42,7 +42,6 @@
     <meta name="theme-color" content="#ffffff">
 
 
-<!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     <script src="{{ '/js/vendor/modernizr-custom.js' | prepend: site.baseurl }}"></script>
     <script src="{{ '/js/script.js' | prepend: site.baseurl }}"></script>
 
@@ -56,9 +55,6 @@
 
   </head>
   <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
     <div class="site__wrapper">
         <header class="site__header">
 
@@ -151,7 +147,9 @@
                 <span class="hamburger"></span>
             </div>
 
-
+            <!-- the nav-wrapper covers the hamburger-wrapper and since it
+                appears later in the HTML, stacks over the hamburger menu.
+                Thus, the z-index needs to be specified for hamburger-wrapper -->
             <div class="nav-wrapper">
                 {% include nav.html %}
             </div>
