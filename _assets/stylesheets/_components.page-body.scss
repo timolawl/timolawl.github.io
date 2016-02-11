@@ -9,7 +9,7 @@
     margin: 0 auto;
 
     @media (max-width: 720px) {
-        width: 90%;
+        width: 90%; //readability
     }
 
     @media (min-width: 721px) {
@@ -33,6 +33,9 @@
     }
 
     &__content {
+        @media (min-width: 1281px) {
+      //      font-size: 2vmin;
+        }
     }
 }
 
@@ -82,7 +85,7 @@
     }
 
     &__content {
-        text-indent: 1em;
+     //   text-indent: 1rem;
         text-align: justify;
     }
 }
@@ -120,11 +123,11 @@
             }
 // I understand the need to specify the above 2, because I'm overriding via specificity the base links, but why do I need to also specify the following two? -- OH; because it HAS to follow the LVHA order.
             &:hover {
-                color: #69e3ff;
+                color: $primary-color;
             }
 
             &:active {
-                color: #69e3ff;
+                color: $primary-color;
             }
         }
 
@@ -134,8 +137,8 @@
 
         &-date {
             display: block;
-            color: #8d8c8e;
-            margin-bottom: 10px;
+            color: $secondary-light;
+            margin-bottom: 1rem;
         }
     }
 }

@@ -10,7 +10,7 @@
     width: 80%;
     max-width: 720px;
     display: inline-block;
-    padding-top: 1rem;
+    padding-top: 3vmin;
     border-top: 1px solid lighten($secondary-light, 35%);
-    color: #8d8c8e;
+    color: $secondary-light;
 }

@@ -4,6 +4,9 @@
 
 html {
     font-family: $font-stack-body;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     //this actually messed up my spacing in chrome - don't use
   //  text-rendering: optimizeLegibility;
 }

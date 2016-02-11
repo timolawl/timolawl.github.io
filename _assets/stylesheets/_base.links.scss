@@ -5,19 +5,19 @@
 a {
     &:link {
      //   color: #000;
-        color: #8d8c8e;
+        color: $secondary-light;
     }
 
     &:visited {
-        color: #8d8c8e;
+        color: $secondary-light;
     }
     
     &:hover {
-        color: #69e3ff;
+        color: $primary-color;
     }
 
     &:active {
-        color: #69e3ff;
+        color: $primary-color;
     }
 
 }
