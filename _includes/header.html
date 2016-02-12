@@ -46,12 +46,14 @@
     <script src="{{ '/js/script.js' | prepend: site.baseurl }}"></script>
 
 
-    <!-- dns-prefetch -->
+    <!-- explicit dns-prefetch (non-anchor tagged) -->
+    <!-- the following don't need to be explicitly fetched as the browser already does so implicitly, as they are included in the HTML as anchor tags -->
+    <!--
     <link rel="dns-prefetch" href="//medicine.buffalo.edu" />
     <link rel="dns-prefetch" href="//som.ucsd.edu" />
     <link rel="dns-prefetch" href="//medicine.stonybrookmedicine.edu" />
     <link rel="dns-prefetch" href="//www.amc.edu" />
-
+    -->
 
   </head>
   <body>

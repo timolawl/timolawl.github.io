@@ -21,9 +21,9 @@
 # http://enable-cors.org/
 # http://www.w3.org/TR/cors/
 
- <IfModule mod_headers.c>
-     Header set Access-Control-Allow-Origin "*"
- </IfModule>
+# <IfModule mod_headers.c>
+#     Header set Access-Control-Allow-Origin "*"
+# </IfModule>
 
 # ----------------------------------------------------------------------
 # | Cross-origin images                                                |
@@ -211,8 +211,8 @@ Options -MultiViews
 
   # Web fonts
 
-    AddType application/x-font-woff                     woff
-    AddType application/x-font-woff2                    woff2
+    AddType application/font-woff                     woff
+    AddType application/font-woff2                    woff2
     AddType application/vnd.ms-fontobject               eot
 
     # Browsers usually ignore the font media types and simply sniff
