@@ -2,6 +2,17 @@
 // Base typography
 //
 
+@font-face {
+    font-family: 'Montserrat-Semibold';
+    src: url('/static/webfonts/Montserrat-Semibold/Montserrat-Semibold.eot'); /* IE9 Compat Modes */
+    src: url('/static/webfonts/Montserrat-Semibold/Montserrat-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/static/webfonts/Montserrat-Semibold/Montserrat-Semibold.woff2') format('woff2'), /* Pretty Modern Browsers */
+    url('/static/webfonts/Montserrat-Semibold/Montserrat-Semibold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('/static/webfonts/Montserrat-Semibold/Montserrat-Semibold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/static/webfonts/Montserrat-Semibold/Montserrat-Semibold.svg#Montserrat-Semibold') format('svg'); /* Legacy iOS */
+}
+
+
 html {
     font-family: $font-stack-body;
     -webkit-text-size-adjust: none;
