@@ -41,8 +41,6 @@
     <meta name="msapplication-config" content="{{ '/static/images/favicons/browserconfig.xml' | prepend: site.baseurl }}">
     <meta name="theme-color" content="#ffffff">
 
-
-    <script src="{{ '/js/vendor/modernizr-custom.js' | prepend: site.baseurl }}"></script>
     <script src="{{ '/js/script.js' | prepend: site.baseurl }}"></script>
 
 
@@ -160,8 +158,8 @@
                 </svg>
             </a>
 
-            <!-- hamburger menu goes here -->
-            <div class="hamburger-wrapper">
+            <!-- hamburger menu goes here; id for JS getElementByID-->
+            <div id="hamburger-wrapper" class="hamburger-wrapper">
                 <span class="hamburger"></span>
             </div>
 

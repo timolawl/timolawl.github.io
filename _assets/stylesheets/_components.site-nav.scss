@@ -66,11 +66,11 @@
             display: block;
             color: black;
             text-decoration: none;
-            
+
             &:link {
                 background-color: $secondary-light;
             }
- 
+
             &[class="active"] {
                 background-color: $primary-color;
             }
