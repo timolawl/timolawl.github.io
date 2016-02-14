@@ -61,87 +61,103 @@
         <header class="site__header">
 
             <a class="site__title logo--status" href="/">
-                <svg class="site__logo logo--basic {% if page.title == 'Home' %}is-hidden{% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
-                    <style>
-                        .bt0{fill:#a5eeff}
-                        .bt1{fill:#8d8c8e}
-                        .bt2{fill:none;
+                <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <symbol id="logo--basic" viewBox="0 0 124 84">
+                        <style>
+                            .bt0{fill:#a5eeff}
+                            .bt1{fill:#8d8c8e}
+                            .bt2{fill:none;
+                                stroke:#000;
+                                stroke-width:4;
+                                stroke-linecap:round;
+                                stroke-linejoin:round;
+                                stroke-miterlimit:10}
+                        </style>
+                        <path id="XMLID_363_" d="M82 2L62 22 42 2z"/>
+                        <path id="XMLID_362_" class="bt0" d="M48 2h-6l20 20v-6z"/>
+                        <path id="XMLID_361_" d="M76 2L62 16v6L82 2z"/>
+                        <path id="XMLID_360_" d="M62 22l14 40-14 20-14-20z"/>
+                        <path id="XMLID_359_" d="M74.1 56.7L62 74v8l14-20z"/>
+                        <path id="XMLID_358_" class="bt0" d="M49.9 56.7L48 62l14 20v-8z"/>
+                        <path id="XMLID_419_" class="bt1" d="M122 2l-20 20H62L82 2h34z"/>
+                        <path id="XMLID_418_" class="bt1" d="M62 22H22L2 2h40z"/>
+                        <path id="XMLID_416_" class="bt2" d="M82 2H42"/>
+                        <path id="XMLID_415_" class="bt2" d="M42 2H2l20 20h40z"/>
+                        <path id="XMLID_414_" class="bt2" d="M82 2h40l-20 20H62z"/>
+                        <path id="XMLID_413_" class="bt2" d="M48 62l14 20 14-20-14-40z"/>
+                    </symbol>
+
+                    <symbol id="logo--highlight" viewBox="0 0 124 84">
+                        <style>
+                            .ht0{fill:#8d8c8e}
+                            .ht1{fill:#69e3ff}
+                            .ht2{fill:#a5eeff}
+                            .ht3{fill:#c3f4ff}
+                            .ht4{fill:none;
                             stroke:#000;
                             stroke-width:4;
                             stroke-linecap:round;
                             stroke-linejoin:round;
                             stroke-miterlimit:10}
-                    </style>
-                    <path id="XMLID_363_" d="M82 2L62 22 42 2z"/>
-                    <path id="XMLID_362_" class="bt0" d="M48 2h-6l20 20v-6z"/>
-                    <path id="XMLID_361_" d="M76 2L62 16v6L82 2z"/>
-                    <path id="XMLID_360_" d="M62 22l14 40-14 20-14-20z"/>
-                    <path id="XMLID_359_" d="M74.1 56.7L62 74v8l14-20z"/>
-                    <path id="XMLID_358_" class="bt0" d="M49.9 56.7L48 62l14 20v-8z"/>
-                    <path id="XMLID_419_" class="bt1" d="M122 2l-20 20H62L82 2h34z"/>
-                    <path id="XMLID_418_" class="bt1" d="M62 22H22L2 2h40z"/>
-                    <path id="XMLID_416_" class="bt2" d="M82 2H42"/>
-                    <path id="XMLID_415_" class="bt2" d="M42 2H2l20 20h40z"/>
-                    <path id="XMLID_414_" class="bt2" d="M82 2h40l-20 20H62z"/>
-                    <path id="XMLID_413_" class="bt2" d="M48 62l14 20 14-20-14-40z"/>
-                </svg>
+                        </style>
+                        <path id="XMLID_51_" class="ht0" d="M122 2l-20 20H62L82 2h34z"/>
+                        <path id="XMLID_50_" class="ht0" d="M62 22H22L2 2h40z"/>
+                        <path id="XMLID_49_" class="ht1" d="M82 2L62 22v-8L74 2z"/>
+                        <path id="XMLID_48_" class="ht1" d="M74.1 56.7L76 62 62 82v-8z"/>
+                        <path id="XMLID_47_" class="ht2" d="M65 30.6l9.1 26.1L62 74v-.6L54 62l1.9-5.3L62 39.2z"/>
+                        <path id="XMLID_46_" class="ht2" d="M74 2L62 14 50 2z"/>
+                        <path id="XMLID_45_" class="ht3" d="M62 22l3 8.6-3 8.6z"/>
+                        <path id="XMLID_44_" class="ht3" d="M62 74v8L48 62l1.9-5.3L62 22v17.2l-6.1 17.5L54 62l8 11.4z"/>
+                        <path id="XMLID_43_" class="ht3" d="M62 14v8L42 2h8z"/>
+                        <path id="XMLID_41_" class="ht4" d="M82 2H42"/>
+                        <path id="XMLID_40_" class="ht4" d="M42 2H2l20 20h40z"/>
+                        <path id="XMLID_39_" class="ht4" d="M82 2h40l-20 20H62z"/>
+                        <path id="XMLID_38_" class="ht4" d="M62 22L49.9 56.7 48 62l14 20 14-20-1.9-5.3L65 30.6z"/>
+                    </symbol>
 
-                <svg class="site__logo logo--highlight is-hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
-                    <style>
-                        .ht0{fill:#8d8c8e}
-                        .ht1{fill:#69e3ff}
-                        .ht2{fill:#a5eeff}
-                        .ht3{fill:#c3f4ff}
-                        .ht4{fill:none;
-                        stroke:#000;
-                        stroke-width:4;
-                        stroke-linecap:round;
-                        stroke-linejoin:round;
-                        stroke-miterlimit:10}
-                    </style>
-                    <path id="XMLID_51_" class="ht0" d="M122 2l-20 20H62L82 2h34z"/>
-                    <path id="XMLID_50_" class="ht0" d="M62 22H22L2 2h40z"/>
-                    <path id="XMLID_49_" class="ht1" d="M82 2L62 22v-8L74 2z"/>
-                    <path id="XMLID_48_" class="ht1" d="M74.1 56.7L76 62 62 82v-8z"/>
-                    <path id="XMLID_47_" class="ht2" d="M65 30.6l9.1 26.1L62 74v-.6L54 62l1.9-5.3L62 39.2z"/>
-                    <path id="XMLID_46_" class="ht2" d="M74 2L62 14 50 2z"/>
-                    <path id="XMLID_45_" class="ht3" d="M62 22l3 8.6-3 8.6z"/>
-                    <path id="XMLID_44_" class="ht3" d="M62 74v8L48 62l1.9-5.3L62 22v17.2l-6.1 17.5L54 62l8 11.4z"/>
-                    <path id="XMLID_43_" class="ht3" d="M62 14v8L42 2h8z"/>
-                    <path id="XMLID_41_" class="ht4" d="M82 2H42"/>
-                    <path id="XMLID_40_" class="ht4" d="M42 2H2l20 20h40z"/>
-                    <path id="XMLID_39_" class="ht4" d="M82 2h40l-20 20H62z"/>
-                    <path id="XMLID_38_" class="ht4" d="M62 22L49.9 56.7 48 62l14 20 14-20-1.9-5.3L65 30.6z"/>
+                    <symbol id="logo--at-home" viewBox="0 0 124 84">
+                        <style>
+                            .st0{fill:#8d8c8e}
+                            .st1{fill:#357280}
+                            .st2{fill:#69e3ff}
+                            .st3{fill:#a5eeff}
+                            .st4{fill:none;
+                            stroke:#000;
+                            stroke-width:4;
+                            stroke-linecap:round;
+                            stroke-linejoin:round;
+                            stroke-miterlimit:10}
+                        </style>
+                        <path id="XMLID_451_" class="st0" d="M122 2l-20 20H62L82 2h34z"/>
+                        <path id="XMLID_450_" class="st0" d="M62 22H22L2 2h40z"/>
+                        <path id="XMLID_449_" class="st1" d="M82 2L62 22v-8L74 2z"/>
+                        <path id="XMLID_448_" class="st1" d="M74.1 56.7L76 62 62 82v-8z"/>
+                        <path id="XMLID_447_" class="st2" d="M65 30.6l9.1 26.1L62 74v-.6L54 62l1.9-5.3L62 39.2z"/>
+                        <path id="XMLID_446_" class="st2" d="M74 2L62 14 50 2z"/>
+                        <path id="XMLID_445_" class="st3" d="M62 22l3 8.6-3 8.6z"/>
+                        <path id="XMLID_444_" class="st3" d="M62 74v8L48 62l1.9-5.3L62 22v17.2l-6.1 17.5L54 62l8 11.4z"/>
+                        <path id="XMLID_443_" class="st3" d="M62 14v8L42 2h8z"/>
+                        <path id="XMLID_441_" class="st4" d="M82 2H42"/>
+                        <path id="XMLID_440_" class="st4" d="M42 2H2l20 20h40z"/>
+                        <path id="XMLID_439_" class="st4" d="M82 2h40l-20 20H62z"/>
+                        <path id="XMLID_438_" class="st4" d="M62 22L49.9 56.7 48 62l14 20 14-20-1.9-5.3L65 30.6z"/>
+                    </symbol>
                 </svg>
+                <!-- use the symbols here -->
+                {% if page.title != "Home" %}
+                    <svg class="logo--basic" viewBox="0 0 124 84">
+                        <use xlink:href="#logo--basic"></use>
+                    </svg>
+                {% else %}
+                    <svg class="logo--at-home" viewBox="0 0 124 84">
+                        <use xlink:href="#logo--at-home"></use>
+                    </svg>
+                {% endif %}
 
-                <svg class="site__logo logo--at-home {% if page.title != 'Home' %}is-hidden {% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
-                    <style>
-                        .st0{fill:#8d8c8e}
-                        .st1{fill:#357280}
-                        .st2{fill:#69e3ff}
-                        .st3{fill:#a5eeff}
-                        .st4{fill:none;
-                        stroke:#000;
-                        stroke-width:4;
-                        stroke-linecap:round;
-                        stroke-linejoin:round;
-                        stroke-miterlimit:10}
-                    </style>
-                    <path id="XMLID_451_" class="st0" d="M122 2l-20 20H62L82 2h34z"/>
-                    <path id="XMLID_450_" class="st0" d="M62 22H22L2 2h40z"/>
-                    <path id="XMLID_449_" class="st1" d="M82 2L62 22v-8L74 2z"/>
-                    <path id="XMLID_448_" class="st1" d="M74.1 56.7L76 62 62 82v-8z"/>
-                    <path id="XMLID_447_" class="st2" d="M65 30.6l9.1 26.1L62 74v-.6L54 62l1.9-5.3L62 39.2z"/>
-                    <path id="XMLID_446_" class="st2" d="M74 2L62 14 50 2z"/>
-                    <path id="XMLID_445_" class="st3" d="M62 22l3 8.6-3 8.6z"/>
-                    <path id="XMLID_444_" class="st3" d="M62 74v8L48 62l1.9-5.3L62 22v17.2l-6.1 17.5L54 62l8 11.4z"/>
-                    <path id="XMLID_443_" class="st3" d="M62 14v8L42 2h8z"/>
-                    <path id="XMLID_441_" class="st4" d="M82 2H42"/>
-                    <path id="XMLID_440_" class="st4" d="M42 2H2l20 20h40z"/>
-                    <path id="XMLID_439_" class="st4" d="M82 2h40l-20 20H62z"/>
-                    <path id="XMLID_438_" class="st4" d="M62 22L49.9 56.7 48 62l14 20 14-20-1.9-5.3L65 30.6z"/>
+                <!-- logo highlight logic in CSS file-->
+                <svg class="logo--highlight" viewBox="0 0 124 84">
+                    <use xlink:href="#logo--highlight"></use>
                 </svg>
-
             </a>
 
             <!-- hamburger menu goes here -->
