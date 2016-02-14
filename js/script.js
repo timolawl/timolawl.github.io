@@ -11,8 +11,15 @@
 
 // make array to keep all the js file extensions to load:
 
+var hasTouch = 'ontouchstart' in window;
+
+if(!hasTouch) {
+    var root = document.documentElement;
+    root.classList.add('no-touch');
+}
+
 // Load Modernizr and jQuery
-var scripts = ["//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js", "//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"];
+var scripts = ["//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"];
 
 // if on mobile, load this: (not using agent sniffing because it's unreliable. best practice is to use css media query specific tags/classes specific to certain widths
 //
