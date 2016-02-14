@@ -17,30 +17,28 @@ jQuery.githubCommits = function(callback) {
     jQuery.getJSON("https://api.github.com/repos/timolawl/timolawl.github.io/commits?callback=?", callback);
 };
 
+var mostRecentCommit = null;
+
+$.githubCommits(function(data) {
+    var commits = data.data;
+    mostRecentCommit = commits[0];
+});
+
 jQuery.fn.loadLastCommitMessage = function() {
   //  this.html("<span>Querying GitHub for last commit message...</span>");
 
     var target = this;
-    $.githubCommits(function(data) {
-        var commits = data.data;
-        var mostRecentCommit = commits[0];
-
-         target.empty().append($('<code>' + mostRecentCommit.commit.message + '</code>'));
-    });
+    target.empty().append($('<code>' + mostRecentCommit.commit.message + '</code>'));
 };
 
 jQuery.fn.loadTimeSince = function() {
 //    this.html("<span>Querying GitHub for commit time...</span>");
 
     var target = this;
-    $.githubCommits(function(data) {
-        var commits = data.data;
-        var mostRecentCommit = commits[0];
-        var commitTime = mostRecentCommit.commit.committer.date;
-        var formattedCommitTime = new Date(Date.parse(commitTime));
-        var formattedTime = timeFormatter(formattedCommitTime);
-        target.empty().append($('<div>' + formattedTime + '</div>'));
-    });
+    var commitTime = mostRecentCommit.commit.committer.date;
+    var formattedCommitTime = new Date(Date.parse(commitTime));
+    var formattedTime = timeFormatter(formattedCommitTime);
+    target.empty().append($('<div>' + formattedTime + '</div>'));
 };
 
 function timeFormatter(date) {
