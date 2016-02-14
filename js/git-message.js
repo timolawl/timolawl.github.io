@@ -37,18 +37,18 @@ jQuery.fn.loadTimeSince = function() {
         var commits = data.data;
         var mostRecentCommit = commits[0];
         var commitTime = mostRecentCommit.commit.committer.date;
-        var formattedCommitTime = Date.parse(commitTime).add({ hours: -8 });
+        var formattedCommitTime = new Date(Date.parse(commitTime));
         var formattedTime = timeFormatter(formattedCommitTime);
-
         target.empty().append($('<div>' + formattedTime + '</div>'));
     });
 };
-
 
 function timeFormatter(date) {
     //format into two parts: the date/day and the time:
     var now = new Date();
     var formattedDate = null;
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var dayName = days[date.getDay()];
     //if same day
     if(now.getDay() === date.getDay() && (now - date < 86400000)) {
         return "Today at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
@@ -59,11 +59,11 @@ function timeFormatter(date) {
     }
     //if sometime this past week
     else if(now.getDay() - date.getDay() > 0 && now - date < 604800000) {
-        return date.getDayName() + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
+        return dateName + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
     }
     //if sometime last week
     else if(now.getDay() - date.getDay() < 0 && now - date < 604800000) {
-        return "Last " + date.getDayName() + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
+        return "Last " + dayName + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
     }
     else return date.toLocaleDateString() + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
 }

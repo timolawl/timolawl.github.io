@@ -23,7 +23,6 @@ if (document.documentElement.clientWidth < 900) {
 
 // if at homepage, load these:
 if (window.location.pathname === '/') {
-    scripts.push("{{ '/js/vendor/date.js' | prepend: site.baseurl }}");
     scripts.push("{{ '/js/git-message.js' | prepend: site.baseurl }}");
 }
 
