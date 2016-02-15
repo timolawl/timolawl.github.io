@@ -160,7 +160,10 @@
         text-align: left;
         font-size: 1rem;
         font-family: monospace;
-      //  background-image: 
+        background-position: center;
+        background-size: 50%;
+        background-image: url('/static/images/TieBackgroundOpacity.svg');
+        background-repeat: no-repeat;
     }
 
     &__content:focus {
