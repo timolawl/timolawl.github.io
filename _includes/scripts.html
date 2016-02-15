@@ -1,42 +1,12 @@
 <script>
-
     /* Google Analytics Snippet */
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
     ga('create','UA-72590422-1','auto');ga('send','pageview')
-
-    /* Window.onload to ensure the async scripts are loaded, since they are dependencies */
-    window.onload = function() {
-    /* FastClick Snippet for mobile */
-        if (document.documentElement.clientWidth < 900) {
-            if ('addEventListener' in document) {
-                document.addEventListener('DOMContentLoaded', function() {
-                    FastClick.attach(document.body);
-                }, false);
-            }
-        }
-
-        /* Hamburger Menu Snippet */
-        document.getElementById('hamburger-wrapper').onclick = function() {
-            this.classList.toggle('open');
-            var openclose = this.classList.contains('open') ? 'Close' : 'Open';
-            this.setAttribute("title", openclose + ' Menu');
-        };
-
-
-        /* Git Message Snippet if at homepage */
-        {% if page.title == 'Home' %}
-        // cant do it like this because I made it a jQuery function, not a JS function
-        //    document.getElementById('time-since-commit').loadTimeSince();
-        //    document.getElementById('lastCommitMessage').loadLastCommitMessage();
-
-        $(function() {
-            $('.time-since-commit').loadTimeSince();
-            $('#lastCommitMessage').loadLastCommitMessage();
-        });
-        {% endif %}
-    }
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+<script src="{{ '/js/post-script.js' | prepend: site.baseurl }}"></script>
+
+<script src="//www.google-analytics.com/analytics.js" async defer></script>
 
 
 <!--
