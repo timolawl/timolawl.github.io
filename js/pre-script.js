@@ -19,7 +19,7 @@ if(!hasTouch) {
 }
 
 // Load Modernizr and jQuery
-var scripts = ["//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"];
+var scripts = [];
 
 // if on mobile, load this: (not using agent sniffing because it's unreliable. best practice is to use css media query specific tags/classes specific to certain widths
 //

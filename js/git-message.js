@@ -13,6 +13,8 @@ jQuery.fn.checkRateLimit = function() {
 };
 */
 
+
+/*
 jQuery.githubCommits = function(callback) {
     jQuery.getJSON("https://api.github.com/repos/timolawl/timolawl.github.io/commits?callback=?", callback);
 };
@@ -23,12 +25,14 @@ $.githubCommits(function(data) {
     var commits = data.data;
     mostRecentCommit = commits[0];
 });
-
+*/
+/*
 jQuery.fn.loadLastCommitMessage = function() {
   //  this.html("<span>Querying GitHub for last commit message...</span>");
 
     var target = this;
-    target.empty().append($('<code>' + mostRecentCommit.commit.message + '</code>'));
+  //  target.empty().append($('<code>' + mostRecentCommit.commit.message + '</code>'));
+    target.empty().appendChild('<code>' + mostRecentCommit.commit.message + '</code>');
 };
 
 jQuery.fn.loadTimeSince = function() {
@@ -38,7 +42,77 @@ jQuery.fn.loadTimeSince = function() {
     var commitTime = mostRecentCommit.commit.committer.date;
     var formattedCommitTime = new Date(Date.parse(commitTime));
     var formattedTime = timeFormatter(formattedCommitTime);
-    target.empty().append($('<div>' + formattedTime + '</div>'));
+   // target.empty().append($('<div>' + formattedTime + '</div>'));
+    target.empty().appendChild('<div>' + formattedTime + '</div>');
+};
+*/
+/*
+function getCommit(url) {
+    //Return a new promise.
+    return new Promise(function(resolve, reject) {
+        // do the usual XHR stuff
+        var req = new XMLHttpRequest();
+        req.open('GET', url);
+        
+        req.onload = function() {
+            if(req.status == 200) {
+                resolve(req.response);
+            }
+            else {
+                reject(Error(req.statusText));
+            }
+        };
+
+        //handle network errors
+        req.onerror = function() {
+            reject(Error("Network Error"));
+        };
+
+        //make the request
+        req.send();
+    });
+}
+*/
+
+function startCommitMsgRequest() {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+            var commits = JSON.parse(xhr.responseText);
+            loadCommitInfo(commits);
+        }
+    };
+    xhr.open("GET", "https://api.github.com/repos/timolawl/timolawl.github.io/commits");
+    xhr.send();
+}
+
+
+
+
+var loadCommitInfo = function(json) {
+   /*
+    getCommit('https://api.github.com/repos/timolawl/timolawl.github.io/commits').then(function(response) {
+        console.log("Success!", response);
+}, function(error) {
+    console.error("Failed!", error);
+});
+*/
+
+    var mostRecentCommit = json[0];
+
+    var commitTime = mostRecentCommit.commit.committer.date;
+    var formattedCommitTime = new Date(Date.parse(commitTime));
+    var formattedTime = timeFormatter(formattedCommitTime);
+
+    var newDiv = document.createElement("div");
+    var newTime = document.createTextNode(formattedTime);
+    newDiv.appendChild(newTime);
+    document.getElementById('time-since-commit').appendChild(newDiv);
+
+    var newCode = document.createElement("code");
+    var commitMessage = document.createTextNode(mostRecentCommit.commit.message);
+    newCode.appendChild(commitMessage);
+    document.getElementById('lastCommitMessage').appendChild(newCode);
 };
 
 function timeFormatter(date) {

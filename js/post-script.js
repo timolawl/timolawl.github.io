@@ -19,10 +19,13 @@ window.onload = function() {
     /* Git Message Snippet if at homepage */
   //  {% if page.title == 'Home' %}
     if(window.location.pathname === '/') {
+        startCommitMsgRequest();
+     /*
         $(function() {
             $('.time-since-commit').loadTimeSince();
             $('#lastCommitMessage').loadLastCommitMessage();
         });
+        */
     } else if (window.location.pathname === '/note/') {
 
     /* Caching Note into local storage */
