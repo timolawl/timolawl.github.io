@@ -112,7 +112,7 @@ var loadCommitInfo = function(json) {
     var newCode = document.createElement("code");
     var commitMessage = document.createTextNode(mostRecentCommit.commit.message);
     newCode.appendChild(commitMessage);
-    document.getElementById('lastCommitMessage').appendChild(newCode);
+    document.getElementById('last-commit-message').appendChild(newCode);
 };
 
 function timeFormatter(date) {
