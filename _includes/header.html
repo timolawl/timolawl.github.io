@@ -51,18 +51,29 @@
 
     <script src="{{ '/js/pre-script.js' | prepend: site.baseurl }}"></script>
 
-
-    <!-- explicit dns-prefetch (non-anchor tagged) -->
-    <!-- the following don't need to be explicitly fetched as the browser already does so implicitly, as they are included in the HTML as anchor tags -->
-    <!--
-    <link rel="dns-prefetch" href="//medicine.buffalo.edu" />
-    <link rel="dns-prefetch" href="//som.ucsd.edu" />
-    <link rel="dns-prefetch" href="//medicine.stonybrookmedicine.edu" />
-    <link rel="dns-prefetch" href="//www.amc.edu" />
-    -->
-    
   </head>
   <body>
+    <div class="svg-icons">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="display:none">
+            <symbol id="icon-github" viewBox="0 0 512 512">
+                <title>GitHub</title>
+                <path id="XMLID_2_" d="M256,0C114.6,0,0,114.6,0,256c0,113.1,73.4,209.1,175.1,242.9c12.8,2.4,17.5-5.6,17.5-12.3c0-6.1-0.2-26.3-0.3-47.7C121,454.4,106,408.7,106,408.7c-11.6-29.6-28.4-37.5-28.4-37.5c-23.2-15.9,1.8-15.6,1.8-15.6c25.7,1.8,39.2,26.4,39.2,26.4c22.8,39.1,59.9,27.8,74.5,21.3c2.3-16.5,8.9-27.8,16.3-34.2c-56.9-6.5-116.6-28.4-116.6-126.5c0-27.9,10-50.8,26.4-68.7c-2.7-6.4-11.4-32.5,2.5-67.8c0,0,21.5-6.9,70.4,26.2c20.4-5.7,42.3-8.5,64.1-8.6c21.8,0.1,43.7,2.9,64.1,8.6c48.9-33.1,70.3-26.2,70.3-26.2c13.9,35.3,5.2,61.3,2.5,67.8c16.4,17.9,26.3,40.8,26.3,68.7c0,98.3-59.9,120-116.9,126.3c9.2,7.9,17.4,23.5,17.4,47.4c0,34.3-0.3,61.8-0.3,70.3c0,6.8,4.6,14.8,17.6,12.3C438.7,465,512,369.1,512,256C512,114.6,397.4,0,256,0L256,0z"/>
+            </symbol>
+            <symbol id="icon-codepen" viewBox="0 0 512 512">
+                <title>Codepen</title>
+                <path d="M488.9,168l-224-149.3c-5.4-3.6-12.4-3.6-17.8,0L23.1,168c-4.5,3-7.1,8-7.1,13.3v149.3c0,5.4,2.7,10.3,7.1,13.3l224,149.3c2.7,1.8,5.8,2.7,8.9,2.7s6.2-0.9,8.9-2.7l224-149.3c4.5-3,7.1-8,7.1-13.3V181.3C496,176,493.3,171,488.9,168L488.9,168z M256,311.4L172.8,256l83.2-55.4l83.2,55.4L256,311.4z M272,172.8V61.9l179.2,119.4L368,236.8L272,172.8z M240,172.8l-96,64l-83.2-55.4L240,61.9V172.8z M115.2,256L48,300.8v-89.5L115.2,256z M144,275.2l96,64v110.9L60.8,330.7C60.8,330.7,144,275.2,144,275.2z M272,339.2l96-64l83.2,55.4L272,450.1V339.2z M396.8,256l67.2-44.8v89.5L396.8,256z"/></path>
+            </symbol>
+
+            <symbol id="icon-fcc" viewBox="0 0 1280 1024">
+                <title>Free Code Camp</title>
+                <path class="path1" d="M832 736l96 96 320-320-320-320-96 96 224 224z"></path>
+                <path class="path2" d="M448 288l-96-96-320 320 320 320 96-96-224-224z"></path>
+                <path class="path3" d="M701.298 150.519l69.468 18.944-191.987 704.026-69.468-18.944 191.987-704.026z"></path>
+            </symbol>
+
+        </svg>
+    </div>
+
     <div class="site__wrapper">
         <header class="site__header">
 
