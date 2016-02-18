@@ -77,8 +77,6 @@
 
 
 
-
-
 // styling specific to the about page
 .about {
     &__title {
@@ -89,6 +87,16 @@
         text-align: justify;
     }
 }
+
+
+.contact {
+    &-email {
+        margin-top: 2rem;
+    }
+}
+
+
+
 
 //styling specific to the portfolio page
 .portfolio {
