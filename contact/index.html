@@ -6,7 +6,7 @@ in-nav: true
 <form class="contact__form" action="//formspree.io/timolawl@gmail.com"" method="POST">
     <div class="contact-outerwrap">
         <div class="contact-wrapper">
-            <input type="text" id="contact__form--name" class="contact__form--name" placeholder="Name" required />
+            <input type="text" name="name" id="contact__form--name" class="contact__form--name" placeholder="Name" required />
         </div>
         <div class="contact-wrapper">
             <input type="email" name="_replyto" id="contact__form--email" class="contact__form--email" placeholder="Email Address" required />
@@ -16,7 +16,7 @@ in-nav: true
         <input type="text" name="_gotcha" style="display:none" />
 
         <div class="contact-wrapper">
-            <textarea id="contact__form--msg" class="contact__form--msg" placeholder="Message" required></textarea>
+            <textarea name="message" id="contact__form--msg" class="contact__form--msg" placeholder="Message" required></textarea>
         </div>
         <div class="contact-wrapper">
             <button class="contact__form--button" type="submit" >Submit</button>
