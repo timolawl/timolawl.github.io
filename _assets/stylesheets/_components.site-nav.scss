@@ -145,12 +145,11 @@
 }
 
 .nav-wrapper {
-
+    display: inline-block;
+    margin: 0 auto;
+    overflow: hidden;
     @media (max-width: 720px) {
-        display: inline-block;
         max-height: 0;
-        overflow: hidden;
-        margin: 0 auto;
         width: 100%;
    //   transform: scaleY(0);
    //     transform-origin: top;
@@ -162,8 +161,8 @@
 
     //the block portion is needed for the element to center in its parent if width not 100%
     @media (min-width: 721px) {
-        display: inline-block;
-        margin: 0 auto;
+        max-height: none;
+
     }
 }
 
@@ -177,8 +176,18 @@
 // actually in mobile, there's no reason to have hover/active.
 // media queries for the win.
 
+// @keyframes hovered {
+//    from {opacity: 0;}
+//    to {opacity: 1;}
+// }
+
 .logo--highlight {
     display: none;
+//    visibility: hidden;
+ //   height: 0;
+//    opacity: 0;
+ //   overflow: hidden;
+  //  transition: all 0.3s ease;
 }
 
 .no-touch {
@@ -186,6 +195,10 @@
     .logo--status:hover .logo--highlight,
     .logo--status:active .logo--highlight {
         display: block;
+    //    visibility: visible;
+    //    height: auto;
+   //     opacity: 1;
+    //    animation: hovered 250ms ease-in-out both;
     }
 
     .logo--status:hover .logo--at-home,
@@ -193,6 +206,11 @@
     .logo--status:hover .logo--basic,
     .logo--status:active .logo--basic {
         display: none;
+   //     visibility: hidden;
+    //    height: 0;
+     //   opacity: 0;
+     //   overflow: hidden;
+    //    transition: all 0.3s ease;
     }
 }
 
