@@ -7,6 +7,29 @@
 // main JS file
 //
 
+/*
+// Logo transition
+if(window.location.pathname === '/' && ) {
+    // hide everything except for the logo and center the logo
+    function homeAnimation() {
+     //   if(site
+        var nav = document.getElementById('nav-wrapper');
+        nav.classList.toggle('is-offscreen');
+        var main = document.querySelector('main');
+        main.classList.toggle('is-offscreen');
+        var footer = document.querySelector('footer');
+        footer.classList.toggle('is-offscreen');
+
+        // look into classList.toggle(site__logo--hero)
+
+
+    // on logo click, restore everything slowly and css animate the logo back in position.
+    }
+}
+
+
+*/
+
 // conditional loading of JS files (async):
 
 // make array to keep all the js file extensions to load:
@@ -18,7 +41,6 @@ if(!hasTouch) {
     root.classList.add('no-touch');
 }
 
-// Load Modernizr and jQuery
 var scripts = [];
 
 // if on mobile, load this: (not using agent sniffing because it's unreliable. best practice is to use css media query specific tags/classes specific to certain widths

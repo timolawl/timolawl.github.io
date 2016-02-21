@@ -5,3 +5,8 @@
 .is-hidden {
     display: none;
 }
+
+.is-offscreen {
+    position: absolute;
+    left: -1000px;
+}

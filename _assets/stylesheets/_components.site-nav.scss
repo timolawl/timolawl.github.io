@@ -10,21 +10,6 @@
 // nav - a, ul, li
 
 .site {
-
-    //poor naming for this one..
-    &__wrapper {
-        // segment for fixing the nav bar to the top of the viewport
-        // also serves as a general wrapper
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        margin-top: 20px;
-        height: auto;
-        //need to specify z-index for fixed/absolute elements
-        z-index: 100;
-    }
-
     &__header {
         //explicit declaration of width (max-width), with margin centering if needed
         width: 100%;
@@ -32,10 +17,22 @@
         max-width: 960px;
         margin: auto;
         text-align: center;
-    //    background-color: hsla(150, 50%, 25%, 0.5);
+
+        &-wrapper {
+            // segment for fixing the nav bar to the top of the viewport
+            // also serves as a general wrapper
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            margin-top: 20px;
+            height: auto;
+            //need to specify z-index for fixed/absolute elements
+            z-index: 100;
+        }
     }
 
-    &__title {
+    &__logo {
         // set width and height of parent element of svg to the native svg size
         width: 124px;
         height: 84px;
@@ -45,9 +42,15 @@
         top: 0; left: 0; right: 0;
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
-    }
-    // this is the svg logo class itself
-    &__logo {
+        transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        &--hero {
+            width: 50%;
+            height: auto;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 100;
+        }
     }
 
     // all nav customization

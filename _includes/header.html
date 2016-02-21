@@ -78,10 +78,10 @@
         </svg>
     </div>
 
-    <div class="site__wrapper">
+    <div class="site__header-wrapper">
         <header class="site__header">
 
-            <a class="site__title logo--status" href="/">
+            <a class="site__logo logo--status" href="/">
                 <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" style="display: none;">
                     <symbol id="logo--basic" viewBox="0 0 124 84">
                         <style>
@@ -191,7 +191,7 @@
             <!-- the nav-wrapper covers the hamburger-wrapper and since it
                 appears later in the HTML, stacks over the hamburger menu.
                 Thus, the z-index needs to be specified for hamburger-wrapper -->
-            <div class="nav-wrapper">
+            <div id="nav-wrapper" class="nav-wrapper">
                 {% include nav.html %}
             </div>
 
