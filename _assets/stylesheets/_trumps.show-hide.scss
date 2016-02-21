@@ -7,6 +7,56 @@
 }
 
 .is-offscreen {
-    position: absolute;
+    position: fixed;
     left: -1000px;
+}
+
+.is-fadedout {
+    animation: fadeout 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+
+    99% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.is-fadedin {
+    animation: fadein 3s ease-in-out;
+}
+
+@keyframes fadein {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+       // transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+     //   transform: scale(1);
+    }
+}
+
+
+.is-alwaysdisplayed {
+    display: block !important;
+    opacity: 1 !important;
 }

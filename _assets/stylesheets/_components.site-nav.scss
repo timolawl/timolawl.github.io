@@ -33,27 +33,28 @@
     }
 
     &__logo {
+        display: inline-block;
         // set width and height of parent element of svg to the native svg size
         width: 124px;
         height: 84px;
-        margin: auto;
-        position: absolute;
+        position: fixed;
         //the following centers the absolute element.
         top: 0; left: 0; right: 0;
+        margin: 20px auto 0;
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
-        transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 2s ease-in-out;
 
-        &--hero {
-            width: 50%;
-            height: auto;
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: 100;
+        &.site__logo--hero {
+            width: 372px;
+            height: 252px;
+            margin: 0 auto;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 
-    // all nav customization
+     // all nav customization
     &__nav {
 
         font-family: $font-stack-header;
@@ -146,6 +147,9 @@
         }
     }
 }
+
+/*
+.site__logo*/
 
 .nav-wrapper {
     display: inline-block;

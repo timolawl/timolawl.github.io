@@ -1,34 +1,10 @@
 ---
 ---
-
 // the YAML front matter ensures that the liquid tags are parsed.
 
 //
 // main JS file
 //
-
-/*
-// Logo transition
-if(window.location.pathname === '/' && ) {
-    // hide everything except for the logo and center the logo
-    function homeAnimation() {
-     //   if(site
-        var nav = document.getElementById('nav-wrapper');
-        nav.classList.toggle('is-offscreen');
-        var main = document.querySelector('main');
-        main.classList.toggle('is-offscreen');
-        var footer = document.querySelector('footer');
-        footer.classList.toggle('is-offscreen');
-
-        // look into classList.toggle(site__logo--hero)
-
-
-    // on logo click, restore everything slowly and css animate the logo back in position.
-    }
-}
-
-
-*/
 
 // conditional loading of JS files (async):
 

@@ -1,4 +1,67 @@
 /* Window.onload to ensure the async scripts are loaded, since they are dependencies */
+
+// Logo transition
+//
+//
+var logo = document.getElementById('site__logo');
+var nav = document.getElementById('nav-wrapper');
+var main = document.querySelector('main');
+var footer = document.querySelector('footer');
+
+console.log(window.location.pathname);
+console.log(window.location.hash);
+
+// Need a function to check the status of the logo to apply the appropriate transitions
+// Don't need this function outside of homepage.
+if(window.location.pathname === '/') {
+
+    if(!window.location.hash) {
+        logo.setAttribute('class', 'site__logo logo--status site__logo--hero');
+  //      logo.classList.toggle('site__logo--hero');
+    }
+
+    // Initial setup
+    if(logo.classList.contains('site__logo--hero')) {
+        //set up the appropriate initial background styling
+        nav.classList.toggle('is-hidden');
+        main.classList.toggle('is-hidden');
+        footer.classList.toggle('is-hidden');
+    }
+
+    // Click handling
+    logo.onclick = clickHideUnhide;
+
+}
+
+logo.setAttribute('href', '/#home');
+
+function clickHideUnhide() {
+        // Actual behavior
+        if(logo.classList.contains('site__logo--hero')) {
+
+            nav.classList.remove('is-fadedout');
+            main.classList.remove('is-fadedout');
+            footer.classList.remove('is-fadedout');
+
+            nav.classList.toggle('is-fadedin');
+            main.classList.toggle('is-fadedin');
+            footer.classList.toggle('is-fadedin');
+
+            nav.classList.remove('is-hidden');
+            main.classList.remove('is-hidden');
+            footer.classList.remove('is-hidden');
+        }
+        else {
+            nav.classList.remove('is-fadedin');
+            main.classList.remove('is-fadedin');
+            footer.classList.remove('is-fadedin');
+            nav.classList.toggle('is-fadedout');
+            main.classList.toggle('is-fadedout');
+            footer.classList.toggle('is-fadedout');
+        }
+        logo.classList.toggle('site__logo--hero');
+}
+
 window.onload = function() {
     /* FastClick Snippet for mobile */
     if (document.documentElement.clientWidth < 900) {
@@ -20,12 +83,6 @@ window.onload = function() {
   //  {% if page.title == 'Home' %}
     if(window.location.pathname === '/') {
         startCommitMsgRequest();
-     /*
-        $(function() {
-            $('.time-since-commit').loadTimeSince();
-            $('#lastCommitMessage').loadLastCommitMessage();
-        });
-        */
     } else if (window.location.pathname === '/note/') {
 
     /* Caching Note into local storage */
