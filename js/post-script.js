@@ -16,7 +16,11 @@ console.log(window.location.hash);
 if(window.location.pathname === '/') {
 
     if(!window.location.hash) {
-        logo.setAttribute('class', 'site__logo logo--status site__logo--hero');
+        logo.classList.toggle('preload');
+        logo.classList.toggle('site__logo--hero');
+
+    //    logo.className = "site__logo site__logo--hero logo--status";
+     //   logo.classList.toggle('site__logo');
   //      logo.classList.toggle('site__logo--hero');
     }
 
@@ -63,6 +67,14 @@ function clickHideUnhide() {
 }
 
 window.onload = function() {
+    // Segment for ensuring there's no content flashes or transitions on homepage.
+    if(window.location.pathname === '/' && !window.location.hash) {
+        document.querySelector('html').classList.toggle('is-invisible');
+        logo.classList.toggle('preload');
+        // Add additional animation to bring the logo into view.
+
+    }
+
     /* FastClick Snippet for mobile */
     if (document.documentElement.clientWidth < 900) {
         if ('addEventListener' in document) {

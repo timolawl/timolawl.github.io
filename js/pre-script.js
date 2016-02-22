@@ -6,6 +6,11 @@
 // main JS file
 //
 
+if(window.location.pathname === '/' && !window.location.hash) {
+    document.querySelector('html').classList.toggle('is-invisible');
+}
+
+
 // conditional loading of JS files (async):
 
 // make array to keep all the js file extensions to load:

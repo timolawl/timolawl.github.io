@@ -46,8 +46,11 @@
         transition: all 2s ease-in-out;
 
         &.site__logo--hero {
+            display: inline-block;
             width: 372px;
             height: 252px;
+            position: fixed;
+            left: 0; right: 0;
             margin: 0 auto;
             top: 50%;
             transform: translateY(-50%);
