@@ -7,6 +7,7 @@ var logo = document.getElementById('site__logo');
 var nav = document.getElementById('nav-wrapper');
 var main = document.querySelector('main');
 var footer = document.querySelector('footer');
+var hamburger = document.getElementById('hamburger-wrapper');
 
 console.log(window.location.pathname);
 console.log(window.location.hash);
@@ -30,6 +31,7 @@ if(window.location.pathname === '/') {
         nav.classList.toggle('is-hidden');
         main.classList.toggle('is-hidden');
         footer.classList.toggle('is-hidden');
+        hamburger.classList.toggle('is-hidden');
     }
 
     // Click handling
@@ -46,22 +48,28 @@ function clickHideUnhide() {
             nav.classList.remove('is-fadedout');
             main.classList.remove('is-fadedout');
             footer.classList.remove('is-fadedout');
+            hamburger.classList.remove('is-fadedout');
 
             nav.classList.toggle('is-fadedin');
             main.classList.toggle('is-fadedin');
             footer.classList.toggle('is-fadedin');
+            hamburger.classList.toggle('is-fadedin');
 
             nav.classList.remove('is-hidden');
             main.classList.remove('is-hidden');
             footer.classList.remove('is-hidden');
+            hamburger.classList.remove('is-hidden');
         }
         else {
             nav.classList.remove('is-fadedin');
             main.classList.remove('is-fadedin');
             footer.classList.remove('is-fadedin');
+            hamburger.classList.remove('is-fadedin');
+
             nav.classList.toggle('is-fadedout');
             main.classList.toggle('is-fadedout');
             footer.classList.toggle('is-fadedout');
+            hamburger.classList.toggle('is-fadedout');
         }
         logo.classList.toggle('site__logo--hero');
 }
