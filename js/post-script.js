@@ -9,9 +9,6 @@ var main = document.querySelector('main');
 var footer = document.querySelector('footer');
 var hamburger = document.getElementById('hamburger-wrapper');
 
-console.log(window.location.pathname);
-console.log(window.location.hash);
-
 // Need a function to check the status of the logo to apply the appropriate transitions
 // Don't need this function outside of homepage.
 if(window.location.pathname === '/') {
