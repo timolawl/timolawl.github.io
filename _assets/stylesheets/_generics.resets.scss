@@ -10,6 +10,10 @@ html {
     color: #222;
 }
 
+a {
+    outline: 0;
+}
+
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
