@@ -131,7 +131,7 @@ function timeFormatter(date) {
     }
     //if sometime this past week
     else if(now.getDay() - date.getDay() > 0 && now - date < 604800000) {
-        return dateName + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
+        return dayName + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
     }
     //if sometime last week
     else if(now.getDay() - date.getDay() < 0 && now - date < 604800000) {
