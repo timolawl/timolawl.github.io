@@ -9,6 +9,10 @@
 // the YAML front matter is required for jekyll to watch the file, but why?
 // the js/main.js file is watched and updated by jekyll no prob...
 
+// Then again, liquid tags in Sass files no longer work as of Jekyll v. 2.1.0
+
+// As suggested, since the page only has a few dozen at most different page types, just roll it all up into one CSS file so that the browser can cache it.
+
 @charset "UTF-8";
 
 @import "_settings.global";
@@ -29,8 +33,11 @@
 @import "_components.site-nav";
 @import "_components.page-head";
 @import "_components.page-body";
+
+@import "_components.grid";
 @import "_components.module.git-message";
 @import "_components.module.contact-form";
+
 @import "_components.post";
 @import "_components.page-foot";
 

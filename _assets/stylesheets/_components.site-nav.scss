@@ -47,17 +47,7 @@
         transition: all 2s ease-in-out;
 
         &.site__logo--hero {
-            @media (min-width: 721px) {
-                display: inline-block;
-                width: 372px;
-                height: 252px;
-                position: fixed;
-                top: 50%;
-                left: 0; right: 0;
-                margin: -126px auto 0;
-              //  -webkit-transform: translateY(-50%);
-            //    transform: translateY(-50%);
-            }
+
             @media (max-width: 720px) {
                 display: inline-block;
                 width: 248px;
@@ -68,6 +58,18 @@
                 margin: -84px auto 0;
              //   -webkit-transform: translateY(-50%);
               //  transform: translateY(-50%);
+            }
+
+            @media (min-width: 721px) {
+                display: inline-block;
+                width: 372px;
+                height: 252px;
+                position: fixed;
+                top: 50%;
+                left: 0; right: 0;
+                margin: -126px auto 0;
+              //  -webkit-transform: translateY(-50%);
+            //    transform: translateY(-50%);
             }
         }
     }

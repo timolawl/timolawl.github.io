@@ -5,16 +5,16 @@
 
 // customization of layout: page
 .page {
-
+   // background: rgba(120, 120, 120, 0.2);
     margin: 0 auto;
 
     @media (max-width: 720px) {
-        width: 90%; //readability
+        width: 100%; //readability
     }
 
     @media (min-width: 721px) {
-        width: 80%;
-        max-width: 720px;
+        width: 100%;
+        max-width: 960px;
     }
 
     &__header {
@@ -84,12 +84,27 @@
 
     &__content {
      //   text-indent: 1rem;
+        width: 90%;
+        max-width: 760px;
+        margin: 0 auto;
         text-align: justify;
     }
 }
 
 
 .contact {
+    &__content {
+    //    @media (max-width: 760px) {
+    //        width: 90%;
+   //     }
+    //    @media (min-width: 761px) {
+            width: 90%;
+    //    }
+
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
     &-email {
         margin-top: 2rem;
     }
@@ -100,7 +115,53 @@
 
 //styling specific to the portfolio page
 .portfolio {
+    &__content {
+        margin: 0 auto;
+        @media (min-width: 821px) and (max-width: 980px) {
+            width: 800px;
+        }
+    }
 
+   &__project-image {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        -webkit-filter: grayscale(1) url(#filter--monochrome);
+        filter: grayscale(1) url(#filter--monochrome);
+     //   transition: all 0.5s;
+        &:hover {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+        }
+   }
+}
+
+@media (max-width: 400px) {
+    [class^='grid-'] {
+        width: 90% !important;
+        margin-left: 5%;
+    }
+}
+
+
+@media (min-width: 401px) and (max-width: 820px) {
+    [class^='grid-'] {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 821px) and (max-width: 980px) {
+    [class^='grid-'] {
+        width: 50% !important;
+    }
+}
+
+
+
+[class*='portfolio-'] {
+ //   overflow: hidden;
+//    border: 1px solid black;
 }
 
 //styling specific to the blog page
@@ -151,22 +212,32 @@
     }
 }
 
-// specific styling to the notes page
 .note {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, #a5eeff 0%, #fff 100%);
-    padding: 1rem;
-
+    
     &__title {
 
     }
 
     &__content {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+}
+
+// specific styling to the notes page
+.notepad {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a5eeff 0%, #fff 100%);
+    padding: 1rem;
+
+    &__content {
         width: 100%;
         height: 100%;
         text-align: left;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-family: monospace;
         background-position: center;
         background-size: 50%;
@@ -178,3 +249,5 @@
         outline: none;
     }
 }
+
+

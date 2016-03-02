@@ -1,0 +1,47 @@
+//
+// Simple grid
+//
+
+$grid__margin: 0;
+$grid__max-columns: 12;
+$grid__single-column-width: (100 - ($grid__margin * ($grid__max-columns - 1)))/$grid__max-columns;
+
+.grid {
+    clear: both;
+    &:before, &:after {
+        content: '';
+        display: table;
+        overflow: auto;
+        zoom: 1;
+    }
+    &:after {
+        clear:both;
+    }
+}
+
+
+[class^='grid-'] {
+    float: left;
+}
+
+[class^='grid-'] + [class^='grid-'] {
+  //  margin-left: $grid__margin;
+  //  margin-top: $grid__margin;
+}
+
+@for $grid__column-span from 1 through 12 {
+
+    $grid__computed-column-width: ($grid__single-column-width * $grid__column-span) + ($grid__margin * ($grid__column-span - 1));
+
+    .grid-#{$grid__column-span}-of-12 {
+     //   width: $grid__computed-column-width;
+        width: $grid__column-span/12 * 100%;
+    }
+}
+
+
+
+
+
+
+

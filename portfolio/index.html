@@ -4,4 +4,42 @@ title: Portfolio
 in-nav: true
 ---
 
-A work in progress.
+<svg style='display: none'>
+    <filter id='filter--monochrome' color-interpolation-filters='sRGB' x='0' y='0' height='100%' width='100%'>
+        <feColorMatrix type='matrix'
+            values='0.65 0 0 0 0
+                    0.93 0 0 0 0
+                    1.00 0 0 0 0
+                    0    0 0 1 0' />
+    </filter>
+</svg>
+
+<div class='grid'>
+    <div class='grid-4-of-12 portfolio-1'>
+        <a href='//codepen.io/timchiang/full/reBZPx'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/tictactoe.png" | prepend: site.baseurl }}'></a>
+    </div>
+    <div class='grid-4-of-12 portfolio-2'>
+        <a href='//codepen.io/timchiang/full/gPEzqw'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/twitch.png" | prepend: site.baseurl }}'></a>
+    </div>
+    <div class='grid-4-of-12 portfolio-3'>
+        <a href='//codepen.io/timchiang/full/reBNgE'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/pomodoro.png" | prepend: site.baseurl }}'></a>
+    </div>
+    <div class='grid-4-of-12 portfolio-4'>
+        <a href='//codepen.io/timchiang/full/wMVPwJ'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/calculator.png" | prepend: site.baseurl }}'></a>
+    </div>
+    <div class='grid-4-of-12 portfolio-5'>
+        <a href='//codepen.io/timchiang/full/RabYzJ'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/simon.png" | prepend: site.baseurl }}'></a>
+    </div>
+    <div class='grid-4-of-12 portfolio-6'>
+        <a href='//codepen.io/timchiang/full/vLwwBq'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/quote.png" | prepend: site.baseurl }}'></a>
+    </div>
+    <div class='grid-4-of-12 portfolio-7'>
+        <a href='//codepen.io/timchiang/full/NxZZwM'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/weather.png" | prepend: site.baseurl }}'></a>
+    </div>
+    <div class='grid-4-of-12 portfolio-8'>
+        <a href='//codepen.io/timchiang/full/VeoxdQ'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/wiki.png" | prepend: site.baseurl }}'></a>
+    </div>
+    <div class='grid-4-of-12 portfolio-9'>
+        <a href='//codepen.io/timchiang/full/jWdLjp'><img class='portfolio__project-image' src='{{ "/static/images/portfolio/tribute.png" | prepend: site.baseurl }}'></a>
+    </div>
+</div>

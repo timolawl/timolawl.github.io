@@ -106,10 +106,10 @@ window.onload = function() {
   //  {% elsif page.title == 'Note' %}
 
         !function(d){
-            var n = d.getElementById('note__content');
+            var n = d.getElementById('notepad__content');
             var k = 'c';
             if (localStorage[k] === undefined) {
-                localStorage[k] = "Replace me! This is a text editor utilizing local storage. Anything typed here will be saved in the browser's local storage, which persists through browser sessions. I made this section in order that I may eventually use my site as a workspace in addition to being a portolio site for others to view.";
+                localStorage[k] = "Replace me! This is a text editor utilizing local storage. Anything typed here will be saved in the browser's local storage, which persists through browser sessions. I made this section in order that I may eventually use my site as a work space in addition to being a portfolio site for others to view.";
             }
             n.innerHTML = localStorage[k];
             n.oninput = function() {
