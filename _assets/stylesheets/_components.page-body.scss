@@ -127,9 +127,9 @@
         display: block;
         max-width: 100%;
         height: auto;
-        -webkit-filter: grayscale(1) url(#filter--monochrome);
-        filter: grayscale(1) url(#filter--monochrome);
-     //   transition: all 0.5s;
+        -webkit-filter: grayscale(100%) url(#filter--monochrome);
+        filter: grayscale(100%); // url(#filter--monochrome);
+    //    transition: all 0.5s;
         &:hover {
             -webkit-filter: grayscale(0);
             filter: grayscale(0);
