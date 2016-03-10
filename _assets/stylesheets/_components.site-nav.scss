@@ -33,7 +33,8 @@
     }
 
     &__logo {
-        display: inline-block;
+        display: block;
+        overflow: hidden; // deals with the flickering when hovered at a certain location
         // set width and height of parent element of svg to the native svg size
         width: 124px;
         height: 84px;
