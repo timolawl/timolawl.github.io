@@ -125,7 +125,7 @@
             width: 800px;
         }
     }
-    
+
     &__project {
         position: relative; // this allows the caption to overlap. link inherits relative.
     }
@@ -137,11 +137,11 @@
         margin: auto; // centers the image
     }
 
-   &__project-image {
-       margin: auto;
-       display: block;
-       max-width: 100%;
-       height: auto;
+    &__project-image {
+        margin: auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
     /*
         // -webkit-filter: grayscale(100%) url(#filter--monochrome);
         // filter: grayscale(100%); // url(#filter--monochrome);
@@ -155,35 +155,31 @@
             //  filter: grayscale(0);
        }
     */
-   }
+    }
 
-   &__project-caption {
-       position: absolute;
-       top: 0;
-       bottom: 0;
-       left: 0;
-       right: 0;
-       width: 100%;
-       height: 100%;
-       padding-top: 27%;
-       @media (min-width: 421px) and (max-width: 980px) {
-         padding-top: calc(50% - 90px);
-       }
-       text-align: center;
-       background-color: rgba(0,0,0,0.85);
-       color: white;
-    //   transition: opacity 1000ms ease;
-       opacity: 0;
-       z-index: 10;
+    &__project-caption {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 27%;
+        @media (min-width: 421px) and (max-width: 980px) {
+          padding-top: calc(50% - 90px);
+        }
+        text-align: center;
+        background-color: rgba(0,0,0,0.85);
+        color: white;
+     //   transition: opacity 1000ms ease;
+        opacity: 0;
+        z-index: 10;
 
-       &:hover {
-         opacity: 1;
-       }
-   }
-}
-
-br {
-    line-height: 0.5rem;
+        &:hover {
+          opacity: 1;
+        }
+    }
 }
 
 .caption {
@@ -191,14 +187,13 @@ br {
         color: $primary-light;
         display: block;
         font-family: Montserrat;
-        font-size: 1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        letter-spacing: 0.015rem;
         @media (min-width: 421px) and (max-width: 980px) {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            letter-spacing: 0.02rem;
         }
-
-
-
-      //  font-weight: bold;
     }
 
     &--implementation {
