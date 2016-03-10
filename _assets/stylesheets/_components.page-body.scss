@@ -117,30 +117,92 @@
 .portfolio {
     &__content {
         margin: 0 auto;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
         @media (min-width: 821px) and (max-width: 980px) {
             width: 800px;
         }
     }
+    
+    &__project {
+        position: relative; // this allows the caption to overlap. link inherits relative.
+    }
+    &__project-link {
+        display: block; // needed for the images to remove white space under image
+        width: 100%;
+        max-width: 400px; // sets caption background limit
+        height: auto;
+        margin: auto; // centers the image
+    }
 
    &__project-image {
-        margin: 0 auto;
-        display: block;
-        max-width: 100%;
-        height: auto;
-
-       // -webkit-filter: grayscale(100%) url(#filter--monochrome);
-       // filter: grayscale(100%); // url(#filter--monochrome);
-    //    transition: all 0.5s;
+       margin: auto;
+       display: block;
+       max-width: 100%;
+       height: auto;
+    /*
+        // -webkit-filter: grayscale(100%) url(#filter--monochrome);
+        // filter: grayscale(100%); // url(#filter--monochrome);
+        // transition: all 0.5s;
         &:hover {
-            -webkit-filter: grayscale(100%) url(#filter--monochrome);
-            filter: grayscale(100%); // url(#filter--monochrome);
+          -webkit-filter: grayscale(100%) url(#filter--monochrome);
+          filter: grayscale(100%); // url(#filter--monochrome);
 
 
-           // -webkit-filter: grayscale(0);
-          //  filter: grayscale(0);
-        }
+            // -webkit-filter: grayscale(0);
+            //  filter: grayscale(0);
+       }
+    */
+   }
+
+   &__project-caption {
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       width: 100%;
+       height: 100%;
+       padding-top: 25%;
+       text-align: center;
+       background-color: rgba(0,0,0,0.85);
+       color: white;
+    //   transition: opacity 1000ms ease;
+       opacity: 0;
+       z-index: 1000;
+
+       &:hover {
+         opacity: 1;
+       }
    }
 }
+
+.caption {
+    &--summary {
+        color: $primary-light;
+        display: block;
+        font-family: Montserrat;
+        font-size: 1rem;
+
+      //  font-weight: bold;
+    }
+
+    &--implementation {
+        /*
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        */
+        display: block;
+        color: $secondary-light;
+        font-size: 0.8rem;
+    }
+}
+
 
 @media (max-width: 400px) {
     [class^='grid-'] {
