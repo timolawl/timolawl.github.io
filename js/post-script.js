@@ -122,7 +122,7 @@ window.onload = function() {
     else if (window.location.pathname === '/portfolio/') {
         var projectImages = document.querySelectorAll('.portfolio__project'), i = 1;
         Array.prototype.forEach.call(projectImages, function(projectImage) {
-            setTimeout(function() { projectImage.classList.add('is-opacity-visible'); }, 100 * i);
+            setTimeout(function() { projectImage.classList.add('is-opacity-visible'); }, 100 * (i-1));
             i++;
         });
     }
