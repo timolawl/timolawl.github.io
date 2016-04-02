@@ -100,7 +100,8 @@ window.onload = function() {
   //  {% if page.title == 'Home' %}
     if(window.location.pathname === '/') {
         startCommitMsgRequest();
-    } else if (window.location.pathname === '/note/') {
+    }
+    else if (window.location.pathname === '/note/') {
 
     /* Caching Note into local storage */
   //  {% elsif page.title == 'Note' %}
@@ -117,5 +118,12 @@ window.onload = function() {
             };
         }(document);
  //   {% endif %}
+    }
+    else if (window.location.pathname === '/portfolio/') {
+        var projectImages = document.querySelectorAll('.portfolio__project'), i = 1;
+        Array.prototype.forEach.call(projectImages, function(projectImage) {
+            setTimeout(function() { projectImage.classList.add('is-opacity-visible'); }, 100 * i);
+            i++;
+        });
     }
 };

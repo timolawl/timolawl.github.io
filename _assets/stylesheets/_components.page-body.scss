@@ -140,7 +140,10 @@
     }
 
     &__project {
-        position: relative; // this allows the caption to overlap. link inherits relative.
+      //  position: relative; // this allows the caption to overlap. link inherits relative.
+        list-style: none;
+        opacity: 0;
+        transition: 0.2s opacity ease-in;
     }
     &__project-link {
         display: block; // needed for the images to remove white space under image
