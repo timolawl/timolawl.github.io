@@ -120,9 +120,9 @@ window.onload = function() {
  //   {% endif %}
     }
     else if (window.location.pathname === '/portfolio/') {
-        var projectImages = document.querySelectorAll('.portfolio__project'), i = 1;
+        var projectImages = document.querySelectorAll('.portfolio__project'), i = 0;
         Array.prototype.forEach.call(projectImages, function(projectImage) {
-            setTimeout(function() { projectImage.classList.add('is-opacity-visible'); }, 100 * (i-1));
+            setTimeout(function() { projectImage.classList.add('is-opacity-visible'); }, 100 * i);
             i++;
         });
     }
