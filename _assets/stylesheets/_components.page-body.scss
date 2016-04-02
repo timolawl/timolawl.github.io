@@ -142,7 +142,7 @@
     &__project {
       //  position: relative; // this allows the caption to overlap. link inherits relative.
         list-style: none;
-        opacity: 0;
+        opacity: 1;
         transition: 0.2s opacity ease-in;
     }
     &__project-link {
