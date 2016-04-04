@@ -23,5 +23,9 @@
     &__content {
      //   text-indent: 1em;
         text-align: justify;
+
+        p {
+            padding-bottom: 1rem;
+        }
     }
 }

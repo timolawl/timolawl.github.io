@@ -112,11 +112,11 @@
                 }
 
                 &:nth-child(2) {
-                    order: 2;
+                    order: 4;
                 }
 
                 &:nth-child(3) {
-                    order: 4;
+                    order: 2;
                 }
 
                 &:last-child {
@@ -140,13 +140,13 @@
                 }
 
                 &:nth-child(2) {
-                    order: 2;
-                    margin-right: 100px;
+                    order: 4;
+                    margin-left: 50px;
                 }
 
                 &:nth-child(3) {
-                    order: 4;
-                    margin-left: 50px;
+                    order: 2;
+                    margin-right: 100px;
                 }
 
                 &:last-child {

@@ -126,4 +126,9 @@ window.onload = function() {
             i++;
         });
     }
+    /*
+    else if (window.location.pathname === '/blog/') {
+        
+    }
+    */
 };
