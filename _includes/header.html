@@ -11,6 +11,12 @@
 
     <title>{{ page.title}} - {{ site.name }}</title>
 
+    <script type='text/javascript'>
+        var host = 'timolawl.github.io';
+        if ((host == window.location.host) && (window.location.protocol != 'https:'))
+            window.location.protocol = 'https';
+    </script>
+
     <!-- dns-prefetch -->
     <link rel="dns-prefetch" href="//fonts.google.apis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
