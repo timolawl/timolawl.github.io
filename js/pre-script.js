@@ -7,7 +7,7 @@
 //
 
 
-if(window.location.pathname === '/' && !window.location.hash) {
+if ((window.location.pathname === '/') && !window.location.hash) {
     document.querySelector('html').classList.toggle('is-invisible');
 }
 
@@ -18,7 +18,7 @@ if(window.location.pathname === '/' && !window.location.hash) {
 
 var hasTouch = 'ontouchstart' in window;
 
-if(!hasTouch) {
+if (!hasTouch) {
     var root = document.documentElement;
     root.classList.add('no-touch');
 }
@@ -33,11 +33,11 @@ if (document.documentElement.clientWidth < 900) {
 }
 
 // if at homepage, load these:
-switch(window.location.pathname) {
+switch (window.location.pathname) {
     case '/': scripts.push("{{ '/js/git-message.js' | prepend: site.baseurl }}"); break;
 }
 
-function loadScripts(scripts) {
+function loadScripts (scripts) {
     var script = scripts.shift();
     var el = document.createElement('script');
     el.src = script;
@@ -83,6 +83,6 @@ function loadEverythingElse() {
 }
 */
 
-if(scripts.length) {
+if (scripts.length) {
     loadScripts(scripts);
 }

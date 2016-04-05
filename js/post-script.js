@@ -11,9 +11,9 @@ var hamburger = document.getElementById('hamburger-wrapper');
 
 // Need a function to check the status of the logo to apply the appropriate transitions
 // Don't need this function outside of homepage.
-if(window.location.pathname === '/') {
+if (window.location.pathname === '/') {
 
-    if(!window.location.hash) {
+    if (!window.location.hash) {
         logo.classList.toggle('preload');
         logo.classList.toggle('site__logo--hero');
 
@@ -23,7 +23,7 @@ if(window.location.pathname === '/') {
     }
 
     // Initial setup
-    if(logo.classList.contains('site__logo--hero')) {
+    if (logo.classList.contains('site__logo--hero')) {
         //set up the appropriate initial background styling
         nav.classList.toggle('is-hidden');
         main.classList.toggle('is-hidden');
@@ -38,9 +38,9 @@ if(window.location.pathname === '/') {
 
 logo.setAttribute('href', '/#home');
 
-function clickHideUnhide() {
+function clickHideUnhide () {
         // Actual behavior
-        if(logo.classList.contains('site__logo--hero')) {
+        if (logo.classList.contains('site__logo--hero')) {
 
             nav.classList.remove('is-fadedout');
             main.classList.remove('is-fadedout');
@@ -71,9 +71,9 @@ function clickHideUnhide() {
         logo.classList.toggle('site__logo--hero');
 }
 
-window.onload = function() {
+window.onload = function () {
     // Segment for ensuring there's no content flashes or transitions on homepage.
-    if(window.location.pathname === '/' && !window.location.hash) {
+    if ((window.location.pathname === '/') && !window.location.hash) {
         document.querySelector('html').classList.toggle('is-invisible');
         logo.classList.toggle('preload');
         // Add additional animation to bring the logo into view.
@@ -98,7 +98,7 @@ window.onload = function() {
 
     /* Git Message Snippet if at homepage */
   //  {% if page.title == 'Home' %}
-    if(window.location.pathname === '/') {
+    if (window.location.pathname === '/') {
         startCommitMsgRequest();
     }
     else if (window.location.pathname === '/note/') {
