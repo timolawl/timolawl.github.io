@@ -11,6 +11,17 @@
 
     <title>{{ page.title}} - {{ site.name }}</title>
 
+    {% if site.enforce_ssl %}
+    <!-- Redirect users to the https version of the website. -->
+    <script type='text/javascript'>
+    // force redirect to https:
+        var enforce = "{{ site.enforce_ssl }}";
+        if ((enforce == window.location.host) && (window.location.protocol != 'https:'))
+            window.location.protocol = 'https:';
+    </script>
+    {% endif %}
+
+
     <!-- dns-prefetch -->
     <link rel="dns-prefetch" href="//fonts.google.apis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
