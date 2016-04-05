@@ -23,7 +23,7 @@ if (!hasTouch) {
     root.classList.add('no-touch');
 }
 
-var scripts = [];
+var scripts = ['/js/enforce-https.js']; // always have https enforced
 
 // if on mobile, load this: (not using agent sniffing because it's unreliable. best practice is to use css media query specific tags/classes specific to certain widths
 //
