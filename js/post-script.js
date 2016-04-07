@@ -14,7 +14,7 @@ var hamburger = document.getElementById('hamburger-wrapper');
 if (window.location.pathname === '/') {
 
     if (!window.location.hash) {
-        logo.classList.toggle('preload');
+        logo.classList.add('preload');
         logo.classList.toggle('site__logo--hero');
 
     //    logo.className = "site__logo site__logo--hero logo--status";
@@ -77,7 +77,7 @@ window.onload = function () {
     // Segment for ensuring there's no content flashes or transitions on homepage.
     if ((window.location.pathname === '/') && !window.location.hash) {
         document.querySelector('html').classList.toggle('is-invisible');
-        logo.classList.toggle('preload');
+        logo.classList.remove('preload');
         // Add additional animation to bring the logo into view.
 
     }

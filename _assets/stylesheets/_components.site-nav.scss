@@ -45,7 +45,6 @@
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
 
-        -webkit-transition: all 2s ease-in-out;
         transition: all 2s ease-in-out;
 
         &.site__logo--hero {
