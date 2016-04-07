@@ -2,15 +2,17 @@
 // trumps - show/hide
 //
 
-.preload {
-    transition: none !important;
-}
-
-.is-invisible {
+.is-invisible { // 1. This is included on the page initially and toggled off after the page loads to prevent flash of content in the beginning.
     visibility: hidden;
 }
 
-.is-hidden {
+
+.preload { // 2. Logo animation: Added to logo to prevent animation from occuring on landing page. Removed after page finishes loading.
+    transition: none !important;
+}
+
+
+.is-hidden { // 3. Logo animation: This is added to other parent elements to hide everything else.
     display: none;
 }
 
@@ -23,12 +25,30 @@
     left: -1000px;
 }
 
-.is-fadedout {
+.is-fadedin { // 4. Logo animation: This is to fade in everything. .is-hidden needs to be removed for this to work.
+    animation: fadein 3s ease-in-out;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.is-fadedout { // 5. Logo animation: This is to fade out everything.
     animation: fadeout 2s ease-in-out;
     animation-fill-mode: forwards;
 }
 
-// Need both height and display property to make them disappear completely
 @keyframes fadeout {
     0% {
         height: 100%;
@@ -46,23 +66,6 @@
     }
 }
 
-.is-fadedin {
-    animation: fadein 3s ease-in-out;
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-
-    1% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 
 .is-alwaysdisplayed {
