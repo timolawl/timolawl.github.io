@@ -67,6 +67,8 @@ function clickHideUnhide () {
             main.classList.toggle('is-fadedout');
             footer.classList.toggle('is-fadedout');
             hamburger.classList.toggle('is-fadedout');
+
+            // No adding of is-hidden because it hides the elements immediately.
         }
         logo.classList.toggle('site__logo--hero');
 }

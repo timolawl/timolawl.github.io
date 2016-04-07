@@ -3,6 +3,7 @@
 //
 
 .footer {
+    height: inherit;
     width: 80%;
     max-width: 720px;
     margin: 0 auto;
@@ -12,9 +13,11 @@
 }
 
 .link-icons {
+    height: inherit;
 }
 
 .icon-links {
+    height: inherit;
     display: inline-block;
     border-radius: 100%;
     border: 4px solid $secondary-light;
