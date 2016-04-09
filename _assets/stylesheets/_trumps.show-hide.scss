@@ -2,7 +2,9 @@
 // trumps - show/hide
 //
 
-.is-invisible { // 1. This is included on the page initially and toggled off after the page loads to prevent flash of content in the beginning.
+// Home page logo animation annotations are numbered here. Other notables file to consider are the pre- and post-script.js files.
+
+.is-invisible { // 1. Logo animation: This is included on the page initially and toggled off after the page loads to prevent flash of content in the beginning.
     visibility: hidden;
 }
 
