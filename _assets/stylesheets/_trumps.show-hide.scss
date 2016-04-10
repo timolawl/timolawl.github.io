@@ -9,7 +9,7 @@
 }
 
 
-.preload { // 2. Logo animation: Added to logo to prevent animation from occuring on landing page. Removed after page finishes loading.
+.is-preloading { // 2. Logo animation: Added to logo to prevent animation from occuring on landing page. Removed after page finishes loading.
     transition: none !important;
 }
 
