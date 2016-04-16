@@ -29,7 +29,7 @@ var scripts = ['/js/enforce-https.js']; // always have https enforced
 //
 // window.matchMedia is better because it has built in event listener for window resize. (it also matches the media to the media query of CSS.
 if (document.documentElement.clientWidth < 900) {
-    scripts.push("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js");
+    scripts.push("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js");
 }
 
 // if at homepage, load these:

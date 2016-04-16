@@ -12,18 +12,18 @@
     <title>{{ page.title}} - {{ site.name }}</title>
 
     <!-- dns-prefetch -->
-    <link rel="dns-prefetch" href="//fonts.google.apis.com" />
-    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-    <!--   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" /> -->
-    <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    <link rel="dns-prefetch" href="//api.github.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!--   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" /> -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://api.github.com" />
 
-    <link rel="dns-prefetch" href="//github.com" />
-    <link rel="dns-prefetch" href="//codepen.io" />
-    <link rel="dns-prefetch" href="//freecodecamp.com" />
+    <link rel="dns-prefetch" href="https://github.com" />
+    <link rel="dns-prefetch" href="https://codepen.io" />
+    <link rel="dns-prefetch" href="https://freecodecamp.com" />
 
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat|Istok+Web" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Istok+Web" />
     <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}" />
     <link rel="canonical" href="{{ page.url | replace:'index.html', '' | prepend: site.baseurl | prepend: site.url }}" />
 <!--
@@ -167,7 +167,7 @@
                 </svg>
                 <!-- use the symbols here -->
                 {% if page.title != "Home" %}
-                    <svg id="logo--basic" class="logo--basic" viewBox="0 0 124 84">
+                    <svg class="logo--basic" viewBox="0 0 124 84">
                         <use xlink:href="#logo--basic"></use>
                     </svg>
                 {% else %}
@@ -177,7 +177,7 @@
                 {% endif %}
 
                 <!-- logo highlight logic in CSS file-->
-                <svg id="logo--highlight" class="logo--highlight" viewBox="0 0 372 252">
+                <svg class="logo--highlight" viewBox="0 0 372 252">
                     <use xlink:href="#logo--highlight"></use>
                 </svg>
             </a> <!-- end link -->
