@@ -47,6 +47,9 @@
 
         transition: all 2s ease-in-out;
 
+        // iOS has issues transitioning width/height (the width/height of the SVG does not shrink, but the viewbox/view window does, which results in a clipped SVG.)
+        // Using scale instead of width/heigth transitions instead has a different set of issues, namely that because scale does not affect the dimensions in the DOM, this needs to be accounted for. However, since the dimensions depends on the viewport, this cannot work. The aforementioned issue is for scaling down, not scaling up, as scaling up has its own problems, that is, it results in a blurry SVG.
+
         &.site__logo--hero {
             @media (max-width: 720px) {
                 width: 248px;
