@@ -38,6 +38,9 @@
     }
 
     &__content {
+        width: 90%;
+        margin: 0 auto;
+
         @media (min-width: 1281px) {
       //      font-size: 2vmin;
         }
