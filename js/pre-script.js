@@ -23,7 +23,10 @@ if (!hasTouch) {
     root.classList.add('no-touch');
 }
 
-var scripts = ['/js/enforce-https.js']; // always have https enforced
+// this is no longer needed because github has a setting to only serve the page through https
+// var scripts = ['/js/enforce-https.js']; // always have https enforced
+
+var scripts = [];
 
 // if on mobile, load this: (not using agent sniffing because it's unreliable. best practice is to use css media query specific tags/classes specific to certain widths
 //
