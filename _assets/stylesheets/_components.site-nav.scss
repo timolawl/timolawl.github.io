@@ -40,8 +40,9 @@
         height: 84px;
         position: fixed;
         //the following centers the absolute element.
-        top: 20px; left: 0; right: 0;
-        margin: auto;
+        top: 20px;
+        left: calc(50% - 62px);
+        margin: 0 auto;
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
 
@@ -51,18 +52,20 @@
         // Using scale instead of width/heigth transitions instead has a different set of issues, namely that because scale does not affect the dimensions in the DOM, this needs to be accounted for. However, since the dimensions depends on the viewport, this cannot work. The aforementioned issue is for scaling down, not scaling up, as scaling up has its own problems, that is, it results in a blurry SVG.
 
         &.site__logo--hero {
-            @media (max-width: 720px) {
+            @media screen and (max-width: 720px) {
                 width: 248px;
                 height: 168px;
                 top: calc(50% - 84px);
-                margin: auto;
+                left: calc(50% - 124px);
+                //margin: auto;
             }
 
-            @media (min-width: 721px) {
+            @media screen and (min-width: 721px) {
                 width: 372px;
                 height: 252px;
-                top: calc(50% - 126px);;
-                margin: auto;
+                top: calc(50% - 126px);
+                left: calc(50% - 186px);
+                //margin: auto;
             }
         }
     }
