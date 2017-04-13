@@ -139,7 +139,7 @@
                 <path class="ht4" d="M186 66l-36.4 104-5.6 16 42 60 42-60-5.6-16L195 91.7z"/>
             </symbol>
 
-            <symbol id="logo--at-home" preserveAspectRatio="xMidYMid meet" viewBox="0 0 372 252">
+            <symbol id="logo--at-home">
                 <style>
                     .st0{fill:#8d8c8e}
                     .st1{fill:#357280}
@@ -172,13 +172,14 @@
     <div class="site__header-wrapper">
         <header class="site__header">
             <a id="site__logo" class="site__logo logo--status" href="/">
+              <div class="svg-positioner">
             <!-- use the symbols here -->
                 {% if page.title != "Home" %}
                     <svg class="logo--basic" viewBox="0 0 124 84">
                         <use xlink:href="#logo--basic"></use>
                     </svg>
                 {% else %}
-                    <svg class="logo--at-home" viewBox="0 0 372 252" preserveAspectRatio="xMidYMid meet">
+                    <svg class="logo--at-home" viewBox="0 0 372 252">
                         <use xlink:href="#logo--at-home"></use>
                     </svg>
                 {% endif %}
@@ -187,6 +188,7 @@
                 <svg class="logo--highlight" viewBox="0 0 372 252">
                     <use xlink:href="#logo--highlight"></use>
                 </svg>
+              </div>
             </a> <!-- end link -->
 
             <!-- hamburger menu goes here; id for JS getElementById-->

@@ -9,6 +9,18 @@
 // wrapper - nav
 // nav - a, ul, li
 
+.svg-positioner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.logo--at-home {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .site {
     &__header {
         //explicit declaration of width (max-width), with margin centering if needed
@@ -42,7 +54,7 @@
         //the following centers the absolute element.
         top: 20px;
         left: calc(50% - 62px);
-        margin: 0 auto;
+        //margin: 0 auto;
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
 
@@ -53,6 +65,7 @@
 
         &.site__logo--hero {
             @media screen and (max-width: 720px) {
+              display: block;
                 width: 248px;
                 height: 168px;
                 top: calc(50% - 84px);
@@ -61,6 +74,7 @@
             }
 
             @media screen and (min-width: 721px) {
+              display: block;
                 width: 372px;
                 height: 252px;
                 top: calc(50% - 126px);
