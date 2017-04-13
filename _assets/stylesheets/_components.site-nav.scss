@@ -37,7 +37,7 @@
         overflow: hidden; // deals with the flickering when hovered at a certain location
         // set width and height of parent element of svg to the native svg size
         width: 124px;
-        height: 84px;
+        height: auto; // 84px;
         position: fixed;
         //the following centers the absolute element.
         top: 0; left: 0; right: 0;
