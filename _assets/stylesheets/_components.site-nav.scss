@@ -37,11 +37,11 @@
         overflow: hidden; // deals with the flickering when hovered at a certain location
         // set width and height of parent element of svg to the native svg size
         width: 124px;
-        height: auto; // 84px;
+        height: 84px;
         position: fixed;
         //the following centers the absolute element.
-        top: 0; left: 0; right: 0;
-        margin: 20px auto 0;
+        top: 20px; left: 0; right: 0;
+        margin: auto;
         //set z-index so that it is above the other elements, not behind
         z-index: 100;
 
@@ -54,15 +54,15 @@
             @media (max-width: 720px) {
                 width: 248px;
                 height: 168px;
-                top: 50%;
-                margin: -84px auto 0;
+                top: calc(50% - 84px);
+                margin: auto;
             }
 
             @media (min-width: 721px) {
                 width: 372px;
                 height: 252px;
-                top: 50%;
-                margin: -126px auto 0;
+                top: calc(50% - 126px);;
+                margin: auto;
             }
         }
     }
