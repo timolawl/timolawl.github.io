@@ -9,8 +9,11 @@
 // wrapper - nav
 // nav - a, ul, li
 
+/**************************************/
+// Fix to the svg scaling issue!
+// https://docs.google.com/presentation/d/1Iuvf3saPCJepVJBDNNDSmSsA0_rwtRYehSmmSSLYFVQ/pub?start=false&loop=false&delayms=3000&slide=id.g18168351a_020
 .svg-positioner {
-  position: relative;
+  position: relative; // needed to establish a positioning context
   height: 100%;
   width: 100%;
 }
@@ -20,6 +23,8 @@
   left: 0;
   top: 0;
 }
+/**************************************/
+
 
 .site {
     &__header {
