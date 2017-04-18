@@ -1201,7 +1201,15 @@ permalink: /resume/elegant/
                 toggleFloatingMenu();
               });
               $( '.js-floating-nav a' ).on( 'click', toggleFloatingMenu );
-            
+           
+              $( 'body' ).on( 'click', function (e) {
+                if (e.target !== document.querySelector('.js-floating-nav-trigger') &&
+                  e.target !== document.querySelector('.js-floating-nav-trigger').firstChild && $( '.js-floating-nav' ).hasClass('is-visible')) {
+
+                  toggleFloatingMenu();
+                }
+              });
+
               $("#remaining-profiles").on('show.bs.collapse', function() {
                 $( '.js-profiles-collapse > i' )
                   .removeClass( 'icon-chevron-down' )
