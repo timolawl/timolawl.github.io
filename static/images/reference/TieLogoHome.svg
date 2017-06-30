@@ -1,4 +1,4 @@
-<svg class="site__logo logo--at-home {% if page.title != 'Home' %}is-hidden {% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
+<svg class="site__logo logo--at-home {% if page.title != 'Current Projects' %}is-hidden {% endif %}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 84">
     <style>
         .st0{fill:#8d8c8e}
         .st1{fill:#357280}

@@ -10,3 +10,6 @@ Gemfile.lock
 
 # Ignore junk files
 .DS_Store
+
+# Ignore resume folder for now
+resume/

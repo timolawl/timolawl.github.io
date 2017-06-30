@@ -101,7 +101,7 @@ window.onload = function () {
     /* Git Message Snippet if at homepage */
   //  {% if page.title == 'Home' %}
     if (window.location.pathname === '/') {
-        startCommitMsgRequest();
+        // startCommitMsgRequest();
     }
     else if (window.location.pathname === '/note/') {
 

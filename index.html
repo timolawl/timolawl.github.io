@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Home
+title: Current Projects
 ---
+<!--
 <p>
 Version 1.4 - Sequential loading of portfolio project images.</p>
 
@@ -20,14 +21,29 @@ Version 1.4 - Sequential loading of portfolio project images.</p>
         <span class="WIP">work in progress.</span></span></div>
 </p>
 
-<div class="commit-message-wrapper">
-    <span class="discord-image-wrapper"><img class="discord-image" src="static/images/DiscordImage.png" alt="Discord profile image" height="45" width="45"></span>
-    <div class="commit-text">
-        <p class="discord-name">timolawl </p>
-        <p id="time-since-commit" class="time-since-commit"></p>
-        <p class="commit-message-title">Latest commit message: </p>
-        <div id="last-commit-message" class="last-commit-message"></div>
-    </div>
+-->
+<div class="home__content">
+  <div class="home__current-projects">
+    <p class="project__title">freeCodeCamp's Arcade Mode</p>
+    <a class="project__snapshot" href="//freecodecamp.github.io/arcade-mode" title="freeCodeCamp's Arcade Mode"><img src='{{ "/static/images/current-projects/FCCArcadeMode.png" | prepend: site.baseurl }}'></a>
+    <p class="project__summary"><a href="//github.com/freecodecamp/arcade-mode">freeCodeCamp's Arcade Mode</a> is a whiteboard interview preparation app featuring algorithm and data structure challenges in a timed environment. It boasts offline capability, benchmarking, and real-life relevant programming problems. The technology stack includes React, Redux, IndexedDB, AppCache, web and service workers, among other things. Estimated completion at the end of summer 2017.</p>
+  </div>
+
+<!--
+
+  <div class="commit-message-wrapper">
+      <span class="discord-image-wrapper"><img class="discord-image" src="static/images/DiscordImage.png" alt="Discord profile image" height="45" width="45"></span>
+      <div class="commit-text">
+          <p class="discord-name">timolawl </p>
+          <p id="time-since-commit" class="time-since-commit"></p>
+          <p class="commit-message-title">Latest commit message: </p>
+          <div id="last-commit-message" class="last-commit-message"></div>
+      </div>
+  </div>
+
+  <div><p class="discord-message">Commit message module in <a href="https://discordapp.com" title="Discord">Discord</a> style. </p></div>
+
+-->
+
 </div>
-<div><p class="discord-message">Commit message module in <a href="https://discordapp.com" title="Discord">Discord</a> style. </p></div>
 

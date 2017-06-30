@@ -37,7 +37,7 @@ if (document.documentElement.clientWidth < 900) {
 
 // if at homepage, load these:
 switch (window.location.pathname) {
-    case '/': scripts.push("{{ '/js/git-message.js' | prepend: site.baseurl }}"); break;
+    // case '/': scripts.push("{{ '/js/git-message.js' | prepend: site.baseurl }}"); break;
 }
 
 function loadScripts (scripts) {

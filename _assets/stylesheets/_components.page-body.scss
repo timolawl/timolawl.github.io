@@ -39,12 +39,39 @@
 
     &__content {
         width: 90%;
+        max-width: 760px;
         margin: 0 auto;
 
         @media (min-width: 1281px) {
       //      font-size: 2vmin;
         }
     }
+
+    &__current-projects {
+      // width
+    }
+}
+
+.project {
+  &__title {
+    font-family: Montserrat;
+    font-size: 20px;
+    background-color: $primary-color;
+    margin-bottom: 1rem;
+    // text-align: initial;
+  }
+
+  &__snapshot {
+    filter: grayscale(1);
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  &__summary {
+    text-align: initial;
+    margin-bottom: 1rem;
+  }
 }
 
 .WIP {
