@@ -62,6 +62,7 @@
   }
 
   &__snapshot {
+    width: 100%;
     filter: grayscale(1);
     &:hover {
       filter: grayscale(0);
