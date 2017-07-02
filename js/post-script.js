@@ -98,6 +98,9 @@ window.onload = function () {
         this.setAttribute("title", openclose + ' Menu');
     };
 
+    // now that the git script is used for the last update time, this goes in every page:
+    startCommitMsgRequest();
+
     /* Git Message Snippet if at homepage */
   //  {% if page.title == 'Home' %}
     if (window.location.pathname === '/') {

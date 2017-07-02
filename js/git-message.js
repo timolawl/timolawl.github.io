@@ -104,15 +104,23 @@ var loadCommitInfo = function(json) {
     var formattedCommitTime = new Date(Date.parse(commitTime));
     var formattedTime = timeFormatter(formattedCommitTime);
 
+    /*
     var newDiv = document.createElement("div");
     var newTime = document.createTextNode(formattedTime);
     newDiv.appendChild(newTime);
     document.getElementById('time-since-commit').appendChild(newDiv);
+   */
 
+    var newTime = document.createTextNode(formattedTime);
+    document.querySelector('.last-updated').appendChild(newTime);
+    console.log('hello?');
+
+    /*
     var newCode = document.createElement("code");
     var commitMessage = document.createTextNode(mostRecentCommit.commit.message);
     newCode.appendChild(commitMessage);
     document.getElementById('last-commit-message').appendChild(newCode);
+   */
 };
 
 function timeFormatter(date) {
@@ -123,19 +131,19 @@ function timeFormatter(date) {
     var dayName = days[date.getDay()];
     //if same day
     if(now.getDay() === date.getDay() && (now - date < 86400000)) {
-        return "Today at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
+        return "today at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'}) + ".";
     }
     //if same yesterday
     else if(now - date < 172800000 && (now.getDay() === date.getDay() + 1 || (now.getDay() === 0 && date.getDay() === 6))) {
-        return "Yesterday at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
+        return "yesterday at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'}) + ".";
     }
     //if sometime this past week
     else if(now.getDay() - date.getDay() > 0 && now - date < 604800000) {
-        return dayName + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
+        return dayName + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'}) + ".";
     }
     //if sometime last week
     else if(now.getDay() - date.getDay() < 0 && now - date < 604800000) {
-        return "Last " + dayName + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
+        return "last " + dayName + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'}) + ".";
     }
-    else return date.toLocaleDateString() + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'});
+    else return date.toLocaleDateString() + " at " + date.toLocaleTimeString(navigator.language, {hour: '2-digit', minute: '2-digit'}) + ".";
 }

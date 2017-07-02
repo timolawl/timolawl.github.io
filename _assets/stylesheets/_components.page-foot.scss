@@ -10,6 +10,15 @@
     border-top: 1px solid lighten($secondary-light, 35%);
     padding-top: 1rem;
     text-align: center;
+
+    &__message {
+        font-size: 12px;
+        width: 80%;
+        max-width: 720px;
+        display: inline-block;
+        padding-top: 1rem;
+        color: $secondary-light;
+    }
 }
 
 .link-icons {
@@ -60,6 +69,7 @@
     width: 80%;
     max-width: 720px;
     display: inline-block;
-    padding-top: 1rem;
+  //  padding-top: 1rem;
     color: $secondary-light;
 }
+

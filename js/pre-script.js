@@ -35,10 +35,15 @@ if (document.documentElement.clientWidth < 900) {
     scripts.push("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js");
 }
 
+/*
 // if at homepage, load these:
 switch (window.location.pathname) {
-    // case '/': scripts.push("{{ '/js/git-message.js' | prepend: site.baseurl }}"); break;
+    case '/': scripts.push("{{ '/js/git-message.js' | prepend: site.baseurl }}"); break;
 }
+*/
+
+// always use git-message now since we're using it for the last update time:
+scripts.push("{{ '/js/git-message.js' | prepend: site.baseurl }}");
 
 function loadScripts (scripts) {
     var script = scripts.shift();
