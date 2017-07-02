@@ -48,7 +48,6 @@
     }
 
     &__current-projects {
-      // width
     }
 }
 
@@ -73,6 +72,11 @@
     text-align: initial;
     margin-bottom: 1rem;
   }
+}
+
+// main element used to hide everything on logo transitions:
+.current.projects.is-fadedout {
+  overflow: hidden;
 }
 
 .WIP {
