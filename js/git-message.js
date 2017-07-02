@@ -113,7 +113,6 @@ var loadCommitInfo = function(json) {
 
     var newTime = document.createTextNode(formattedTime);
     document.querySelector('.last-updated').appendChild(newTime);
-    console.log('hello?');
 
     /*
     var newCode = document.createElement("code");
